@@ -1,0 +1,86 @@
+#wpspeed_settings_rangeSlider,
+#rangelabels {
+	width: 500px
+}
+
+#rangecontainer {
+    margin-bottom: 20px;
+}
+
+#rangelabels {
+	display: flex
+}
+
+#rangelabels>span {
+	flex: 1 1 auto
+}
+
+span.innerlabel {
+	transition: color .5s;
+	transition: background-color .5s;
+	font-weight: normal;
+	font-size: 1rem;
+	display: inline-block;
+	line-height: 1rem;
+}
+
+span.innerlabel {
+	padding: 5px
+}
+
+div.jspeed-setting-row {
+	margin-left: 0;
+    margin-right: 0;
+    height: 25px;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+div.jspeed-setting-row:last-child {
+	border-bottom: none !important;
+}
+
+span[data-container-label="0"] {
+	margin: 0 16px 0 -25px
+}
+
+span[data-container-label="1"] {
+	margin: 0 25px 0 10px
+}
+
+span[data-container-label="2"] {
+	margin: 0 25px 0 0px
+}
+
+span[data-container-label="3"] {
+	margin: 0 10px 0 0
+}
+
+span[data-container-label="4"] {
+	margin: 0 25px 0 20px;
+}
+
+#optimizationslist {
+	display: block;
+	max-width: 650px;
+}
+
+#optimizationslist.populated {
+	min-height: 672px
+}
+
+#optimizationslist span.badge {
+	padding: 5px 8px;
+	font-size: 14px;
+    font-weight: 600;
+}
+
+#optimizationslist span.fas {
+	font-size: 16px;
+    margin-right: 5px;
+}
+
+#rangecontainer span.innerlabel.badge.bg-primary,
+#optimizationslist span.badge.bg-primary {
+    background-color: #2271b1 !important;
+}

@@ -1,0 +1,2689 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WPSpeed PRO\n"
+"POT-Creation-Date: 2024-05-29 22:29+0200\n"
+"PO-Revision-Date: 2024-05-29 22:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wpspeed.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: src/Admin.php:29
+msgid "WPSpeed Settings"
+msgstr ""
+
+#: src/Admin.php:81
+msgid "FAQ"
+msgstr ""
+
+#: src/Admin.php:84
+msgid "PDF docs"
+msgstr ""
+
+#: src/Admin.php:88
+msgid "On-site support"
+msgstr ""
+
+#: src/Admin.php:221
+msgid "<span class=\"ab-icon dashicons-admin-settings\"></span>WPSpeed"
+msgstr ""
+
+#: src/Admin.php:231
+msgid "<span class=\"ab-icon dashicons-trash\"></span>WPSpeed cache"
+msgstr ""
+
+#: src/Admin.php:287
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:36
+msgid "Failed trying to add browser caching codes to the .htaccess file"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:40
+msgid "No .htaccess file were found in the root of this site"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:44
+msgid "The .htaccess file was updated successfully"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:48
+msgid "Failed to update the .htaccess file"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:52
+msgid "Optimizations already added to the .htaccess"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:56
+msgid ""
+"Optimizations for the htaccess file have been successfully added, browser "
+"caching is now enabled for all assets"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:70
+msgid "Failed trying to restore the original .htaccess file"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:74
+msgid ""
+"Optimizations for the htaccess file have been successfully removed, browser "
+"caching is now disabled for all assets"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:86
+msgid "Plugins ordered successfully"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:96
+msgid "New cache key generated!"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:106
+msgid "Cache deleted successfully!"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:108
+msgid ""
+"The cache has been deleted and server cache has been successfully purged!"
+msgstr ""
+
+#: src/Admin/Controller/Utility.php:113
+msgid "Error cleaning cache!"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:119 src/Admin/Settings/Html.php:263
+msgid "No"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:120 src/Admin/Settings/Html.php:264
+msgid "Yes"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:334
+msgid "Custom"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:335
+msgid "Minimum"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:336
+msgid "Standard"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:337
+msgid "Average"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:338
+msgid "Optimal"
+msgstr ""
+
+#: src/Admin/Settings/Html.php:339
+msgid "Maximum"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:29
+msgid "Auto configuration"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:40
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:48
+msgid "General"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:51
+msgid "Include assets"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:52
+msgid "Choose assets to include in the optimization process."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:62
+msgid "Exclude CSS"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:63
+msgid ""
+"Exclude CSS files to preserve the original ones and solve conflicts. It's "
+"possible to select a file name from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:73
+msgid "Remove CSS Files"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:74
+msgid ""
+"You can remove and prevent CSS files from loading on the page if they're "
+"optional or not being used at all to speed up page load and rendering. Pay "
+"attention that removing required files could break your pages."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:82
+msgid "Keep Original Position"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:83
+msgid "Keep the original position for Javascript files and scripts."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:93
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:90
+msgid "Page Cache"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:94
+msgid ""
+"The HTML source code of pages can be fully cached to significantly speed up "
+"the page load. Keep the page cache disabled or clear it while configuring "
+"the plugin or making changes to the site."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:104
+msgid "Combine settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:105
+msgid ""
+"Images loaded through CSS background styles can be combined into one single "
+"image."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:115
+msgid "Lazy-Load Images And Iframes"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:116
+msgid ""
+"The lazy-load reduces the loading time of the page by displaying elements "
+"when the user scrolls down the page."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:126
+msgid "HTTP/2 Settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:127
+msgid ""
+"HTTP/2 Server Push allows an HTTP/2-compliant server to send resources to a "
+"HTTP/2-compliant client before the client requests them."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:137
+msgid "CDN Settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:138
+msgid ""
+"Enter CDN domains to have the plugin load all static files from these "
+"external domains."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:148
+msgid "Optimize Heavy Images"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:149
+msgid ""
+"The images optimization allows to reduce the size of large images that can "
+"be converted, rescaled and resized on the fly."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:159
+msgid "Adaptive Contents Settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:160
+msgid "Adapt your assets and contents for bots and PageSpeed tools."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:170
+msgid "Extract Basic CSS Styles"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:171
+msgid ""
+"Extract basic CSS styles required to format the page above the fold and put "
+"this in a &lt;style&gt; element inside the &lt;head&gt; section of the HTML "
+"to prevent 'render-blocking'."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:176
+msgid "Reduce DOM Tree"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:177
+msgid ""
+"HTML5 DOM elements exceeding the limit of 600 below the fold will be removed "
+"and loaded asynchronously using Javascript after that the page has been "
+"fully rendered."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:182
+msgid "Minify Assets"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:183
+msgid "CSS, Javascript and HTML code can be minified and optimized."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:188
+msgid "Exclude Urls"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:189
+msgid "Disable the plugin optimization for specific urls."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:194
+msgid "Combine Assets"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:195
+msgid "Manage the combining of CSS and Javascript files."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:200
+msgid "Optimization Settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:201
+msgid ""
+"Manage optimizations settings such as cache, position of scripts and fonts "
+"loading."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:206
+msgid "Exclude JS With Order"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:207
+msgid ""
+"If you experience conflicts, choose Javascript files to exclude from the "
+"combine functionality preserving their execution order as they appear on the "
+"page."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:212
+msgid "Exclude JS Without Order"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:213
+msgid ""
+"If you experience conflicts, choose Javascript files to exclude from the "
+"combine functionality without preserving their execution order as they "
+"appear on the page."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:218
+msgid "Remove Javascript Files"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:219
+msgid ""
+"You can remove and prevent Javascript files from loading on the page if "
+"they're optional or not being used at all to speed up page load and "
+"rendering. Pay attention that removing required files could break your pages."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:225
+msgid "Add custom Javascript"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:226
+msgid ""
+"You can add custom Javascript code that will be included within the compiled "
+"file."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:232
+msgid "Add custom CSS"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:233
+msgid ""
+"You can add custom CSS code that will be included within the compiled file."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:239
+msgid "Optimize Images By Pages"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:240
+msgid ""
+"The plugin will scan the pages of your website for you to find the images to "
+"optimize. (Currently only the Main Menu). You don't need to select them "
+"beforehand."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:245
+msgid "Optimize Images By Folders"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:246
+msgid ""
+"Use the file tree to select the subfolders and files you want to optimize. "
+"Files will be optimized in subfolders recursively. If you want to rescale "
+"your images while optimizing, enter the new width and height in the "
+"respective columns beside each image on the right hand side."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:251
+msgid "Advanced Settings"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:252
+msgid "Manage advanced settings for the plugin"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:257
+msgid "Srcset management"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:258
+msgid ""
+"This settings make it possible to automatically generate a srcset starting "
+"from the original image. When this feature is enabled, it will replace the "
+"native Wordpress 'srcset'."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:263
+msgid "Instant Page"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:264
+msgid "Enable the Instant Page preloading before a page is opened."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:269
+msgid "Lazy-Load HTML tags"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Section.php:270
+msgid ""
+"Enable the lazy-load for user-defined HTML tags and parts of a page. They "
+"will be loaded when the user scrolls down the page or after a delay."
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:19
+#: src/Admin/Settings/Renderer/Setting.php:31
+#: src/Admin/Settings/Renderer/Setting.php:35
+#: src/Admin/Settings/Renderer/Setting.php:326
+#: src/Admin/Settings/Renderer/Setting.php:349
+#: src/Admin/Settings/Renderer/Setting.php:355
+#: src/Admin/Settings/Renderer/Setting.php:393
+#: src/Admin/Settings/Renderer/Setting.php:437
+#: src/Admin/Settings/Renderer/Setting.php:620
+#: src/Admin/Settings/Renderer/Setting.php:704
+msgid "text"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:23
+msgid "rangeSlider"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:27
+msgid "pageSpeed"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:38
+#: src/Admin/Settings/Renderer/Setting.php:41
+#: src/Admin/Settings/Renderer/Setting.php:44
+#: src/Admin/Settings/Renderer/Setting.php:47
+#: src/Admin/Settings/Renderer/Setting.php:53
+#: src/Admin/Settings/Renderer/Setting.php:84
+#: src/Admin/Settings/Renderer/Setting.php:87
+#: src/Admin/Settings/Renderer/Setting.php:90
+#: src/Admin/Settings/Renderer/Setting.php:93
+#: src/Admin/Settings/Renderer/Setting.php:96
+#: src/Admin/Settings/Renderer/Setting.php:99
+#: src/Admin/Settings/Renderer/Setting.php:102
+#: src/Admin/Settings/Renderer/Setting.php:105
+#: src/Admin/Settings/Renderer/Setting.php:117
+#: src/Admin/Settings/Renderer/Setting.php:123
+#: src/Admin/Settings/Renderer/Setting.php:126
+#: src/Admin/Settings/Renderer/Setting.php:129
+#: src/Admin/Settings/Renderer/Setting.php:155
+#: src/Admin/Settings/Renderer/Setting.php:161
+#: src/Admin/Settings/Renderer/Setting.php:164
+#: src/Admin/Settings/Renderer/Setting.php:167
+#: src/Admin/Settings/Renderer/Setting.php:170
+#: src/Admin/Settings/Renderer/Setting.php:173
+#: src/Admin/Settings/Renderer/Setting.php:185
+#: src/Admin/Settings/Renderer/Setting.php:206
+#: src/Admin/Settings/Renderer/Setting.php:209
+#: src/Admin/Settings/Renderer/Setting.php:233
+#: src/Admin/Settings/Renderer/Setting.php:236
+#: src/Admin/Settings/Renderer/Setting.php:247
+#: src/Admin/Settings/Renderer/Setting.php:256
+#: src/Admin/Settings/Renderer/Setting.php:259
+#: src/Admin/Settings/Renderer/Setting.php:262
+#: src/Admin/Settings/Renderer/Setting.php:265
+#: src/Admin/Settings/Renderer/Setting.php:268
+#: src/Admin/Settings/Renderer/Setting.php:271
+#: src/Admin/Settings/Renderer/Setting.php:274
+#: src/Admin/Settings/Renderer/Setting.php:286
+#: src/Admin/Settings/Renderer/Setting.php:289
+#: src/Admin/Settings/Renderer/Setting.php:292
+#: src/Admin/Settings/Renderer/Setting.php:311
+#: src/Admin/Settings/Renderer/Setting.php:314
+#: src/Admin/Settings/Renderer/Setting.php:361
+#: src/Admin/Settings/Renderer/Setting.php:364
+#: src/Admin/Settings/Renderer/Setting.php:367
+#: src/Admin/Settings/Renderer/Setting.php:370
+#: src/Admin/Settings/Renderer/Setting.php:373
+#: src/Admin/Settings/Renderer/Setting.php:376
+#: src/Admin/Settings/Renderer/Setting.php:390
+#: src/Admin/Settings/Renderer/Setting.php:413
+#: src/Admin/Settings/Renderer/Setting.php:440
+#: src/Admin/Settings/Renderer/Setting.php:451
+#: src/Admin/Settings/Renderer/Setting.php:481
+#: src/Admin/Settings/Renderer/Setting.php:484
+#: src/Admin/Settings/Renderer/Setting.php:487
+#: src/Admin/Settings/Renderer/Setting.php:490
+#: src/Admin/Settings/Renderer/Setting.php:493
+#: src/Admin/Settings/Renderer/Setting.php:529
+#: src/Admin/Settings/Renderer/Setting.php:532
+#: src/Admin/Settings/Renderer/Setting.php:535
+#: src/Admin/Settings/Renderer/Setting.php:544
+#: src/Admin/Settings/Renderer/Setting.php:617
+#: src/Admin/Settings/Renderer/Setting.php:645
+#: src/Admin/Settings/Renderer/Setting.php:651
+#: src/Admin/Settings/Renderer/Setting.php:657
+#: src/Admin/Settings/Renderer/Setting.php:660
+#: src/Admin/Settings/Renderer/Setting.php:666
+#: src/Admin/Settings/Renderer/Setting.php:669
+#: src/Admin/Settings/Renderer/Setting.php:672
+#: src/Admin/Settings/Renderer/Setting.php:675
+#: src/Admin/Settings/Renderer/Setting.php:686
+#: src/Admin/Settings/Renderer/Setting.php:692
+#: src/Admin/Settings/Renderer/Setting.php:698
+#: src/Admin/Settings/Renderer/Setting.php:701
+#: src/Admin/Settings/Renderer/Setting.php:740
+msgid "radio"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:50
+#: src/Admin/Settings/Renderer/Setting.php:108
+#: src/Admin/Settings/Renderer/Setting.php:111
+#: src/Admin/Settings/Renderer/Setting.php:114
+#: src/Admin/Settings/Renderer/Setting.php:120
+#: src/Admin/Settings/Renderer/Setting.php:158
+#: src/Admin/Settings/Renderer/Setting.php:176
+#: src/Admin/Settings/Renderer/Setting.php:179
+#: src/Admin/Settings/Renderer/Setting.php:182
+#: src/Admin/Settings/Renderer/Setting.php:188
+#: src/Admin/Settings/Renderer/Setting.php:191
+#: src/Admin/Settings/Renderer/Setting.php:194
+#: src/Admin/Settings/Renderer/Setting.php:197
+#: src/Admin/Settings/Renderer/Setting.php:200
+#: src/Admin/Settings/Renderer/Setting.php:203
+#: src/Admin/Settings/Renderer/Setting.php:230
+#: src/Admin/Settings/Renderer/Setting.php:250
+#: src/Admin/Settings/Renderer/Setting.php:253
+#: src/Admin/Settings/Renderer/Setting.php:277
+#: src/Admin/Settings/Renderer/Setting.php:280
+#: src/Admin/Settings/Renderer/Setting.php:283
+#: src/Admin/Settings/Renderer/Setting.php:302
+#: src/Admin/Settings/Renderer/Setting.php:305
+#: src/Admin/Settings/Renderer/Setting.php:308
+#: src/Admin/Settings/Renderer/Setting.php:329
+#: src/Admin/Settings/Renderer/Setting.php:346
+#: src/Admin/Settings/Renderer/Setting.php:352
+#: src/Admin/Settings/Renderer/Setting.php:358
+#: src/Admin/Settings/Renderer/Setting.php:387
+#: src/Admin/Settings/Renderer/Setting.php:517
+#: src/Admin/Settings/Renderer/Setting.php:520
+#: src/Admin/Settings/Renderer/Setting.php:523
+#: src/Admin/Settings/Renderer/Setting.php:526
+#: src/Admin/Settings/Renderer/Setting.php:642
+#: src/Admin/Settings/Renderer/Setting.php:648
+#: src/Admin/Settings/Renderer/Setting.php:654
+msgid "multiselect"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:57
+#: src/Admin/Settings/Renderer/Setting.php:213
+msgid "1 min"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:58
+#: src/Admin/Settings/Renderer/Setting.php:214
+msgid "5 min"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:59
+#: src/Admin/Settings/Renderer/Setting.php:215
+msgid "10 min"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:60
+#: src/Admin/Settings/Renderer/Setting.php:216
+msgid "15 min"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:61
+#: src/Admin/Settings/Renderer/Setting.php:217
+msgid "30 min"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:62
+#: src/Admin/Settings/Renderer/Setting.php:218
+msgid "1 hour"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:63
+#: src/Admin/Settings/Renderer/Setting.php:219
+msgid "3 hours"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:64
+#: src/Admin/Settings/Renderer/Setting.php:220
+msgid "6 hours"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:65
+#: src/Admin/Settings/Renderer/Setting.php:221
+msgid "12 hours"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:66
+#: src/Admin/Settings/Renderer/Setting.php:222
+msgid "1 day"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:67
+#: src/Admin/Settings/Renderer/Setting.php:223
+msgid "2 days"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:68
+msgid "7 days"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:69
+msgid "2 weeks"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:72
+#: src/Admin/Settings/Renderer/Setting.php:81
+#: src/Admin/Settings/Renderer/Setting.php:152
+#: src/Admin/Settings/Renderer/Setting.php:227
+#: src/Admin/Settings/Renderer/Setting.php:244
+#: src/Admin/Settings/Renderer/Setting.php:323
+#: src/Admin/Settings/Renderer/Setting.php:410
+#: src/Admin/Settings/Renderer/Setting.php:434
+#: src/Admin/Settings/Renderer/Setting.php:502
+#: src/Admin/Settings/Renderer/Setting.php:514
+#: src/Admin/Settings/Renderer/Setting.php:562
+#: src/Admin/Settings/Renderer/Setting.php:573
+#: src/Admin/Settings/Renderer/Setting.php:592
+#: src/Admin/Settings/Renderer/Setting.php:603
+#: src/Admin/Settings/Renderer/Setting.php:614
+#: src/Admin/Settings/Renderer/Setting.php:683
+#: src/Admin/Settings/Renderer/Setting.php:712
+#: src/Admin/Settings/Renderer/Setting.php:737
+msgid "select"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:76
+msgid "Low"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:77
+msgid "Normal"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:78
+msgid "High"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:224
+msgid "1 week"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:240
+msgid "Vertical direction"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:241
+msgid "Horizontal direction"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:318
+msgid "Relative"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:319
+msgid "http"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:320
+msgid "https"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:397
+#: src/Admin/Settings/Renderer/Setting.php:421
+#: src/Admin/Settings/Renderer/Setting.php:548
+#: src/Admin/Settings/Renderer/Setting.php:577
+msgid "40%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:398
+#: src/Admin/Settings/Renderer/Setting.php:422
+#: src/Admin/Settings/Renderer/Setting.php:549
+#: src/Admin/Settings/Renderer/Setting.php:578
+msgid "45%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:399
+#: src/Admin/Settings/Renderer/Setting.php:423
+#: src/Admin/Settings/Renderer/Setting.php:550
+#: src/Admin/Settings/Renderer/Setting.php:579
+msgid "50%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:400
+#: src/Admin/Settings/Renderer/Setting.php:424
+#: src/Admin/Settings/Renderer/Setting.php:551
+#: src/Admin/Settings/Renderer/Setting.php:580
+msgid "55%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:401
+#: src/Admin/Settings/Renderer/Setting.php:425
+#: src/Admin/Settings/Renderer/Setting.php:552
+#: src/Admin/Settings/Renderer/Setting.php:581
+msgid "60%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:402
+#: src/Admin/Settings/Renderer/Setting.php:426
+#: src/Admin/Settings/Renderer/Setting.php:553
+#: src/Admin/Settings/Renderer/Setting.php:582
+msgid "65%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:403
+#: src/Admin/Settings/Renderer/Setting.php:427
+#: src/Admin/Settings/Renderer/Setting.php:554
+#: src/Admin/Settings/Renderer/Setting.php:583
+msgid "70%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:404
+#: src/Admin/Settings/Renderer/Setting.php:428
+#: src/Admin/Settings/Renderer/Setting.php:555
+#: src/Admin/Settings/Renderer/Setting.php:584
+msgid "75%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:405
+#: src/Admin/Settings/Renderer/Setting.php:429
+#: src/Admin/Settings/Renderer/Setting.php:556
+#: src/Admin/Settings/Renderer/Setting.php:585
+msgid "80%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:406
+#: src/Admin/Settings/Renderer/Setting.php:430
+#: src/Admin/Settings/Renderer/Setting.php:557
+#: src/Admin/Settings/Renderer/Setting.php:586
+msgid "85%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:407
+#: src/Admin/Settings/Renderer/Setting.php:431
+#: src/Admin/Settings/Renderer/Setting.php:558
+#: src/Admin/Settings/Renderer/Setting.php:587
+msgid "90%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:417
+#: src/Admin/Settings/Renderer/Setting.php:569
+#: src/Admin/Settings/Renderer/Setting.php:599
+msgid "20%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:418
+#: src/Admin/Settings/Renderer/Setting.php:570
+#: src/Admin/Settings/Renderer/Setting.php:600
+msgid "25%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:419
+msgid "30%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:420
+msgid "35%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:443
+msgid "Your server and PHP version support the conversion to the WebP format"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:444
+msgid "WebP conversion supported"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:446
+msgid ""
+"Your server and PHP version don't support the conversion to the WebP format. "
+"Contact your hosting provider in order to activate it via the PHP GD library"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:447
+msgid "WebP conversion not supported"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:469
+msgid "Your server and PHP version support the conversion to the AVIF format"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:470
+msgid "AVIF conversion supported"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:472
+#: src/Admin/Settings/Renderer/Setting.php:476
+msgid ""
+"Your server and PHP version don't support the conversion to the AVIF format. "
+"Upgrade at least to PHP 8.1 and contact your hosting provider in order to "
+"activate it via the PHP GD library"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:473
+#: src/Admin/Settings/Renderer/Setting.php:477
+msgid "AVIF conversion not supported"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:497
+msgid "Full"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:498
+msgid "Partial"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:499
+msgid "None"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:506
+msgid "No exclusions"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:507
+msgid "jpeg"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:508
+msgid "jpg"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:509
+msgid "png"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:510
+msgid "gif"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:511
+msgid "bmp"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:538
+#: src/Admin/Settings/Renderer/Setting.php:541
+#: src/Admin/Settings/Renderer/Setting.php:663
+#: src/Admin/Settings/Renderer/Setting.php:689
+#: src/Admin/Settings/Renderer/Setting.php:695
+msgid "textarea"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:559
+#: src/Admin/Settings/Renderer/Setting.php:588
+msgid "95%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:566
+#: src/Admin/Settings/Renderer/Setting.php:596
+msgid "5%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:567
+#: src/Admin/Settings/Renderer/Setting.php:597
+msgid "10%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:568
+#: src/Admin/Settings/Renderer/Setting.php:598
+msgid "15%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:589
+msgid "100%"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:607
+msgid "Original image"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:608
+msgid "4x"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:609
+msgid "3x"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:610
+msgid "2x"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:611
+msgid "1x"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:624
+msgid "Lighthouse"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:625
+msgid "Googlebot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:626
+msgid "Googlebot-Mobile"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:627
+msgid "Googlebot-Video"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:628
+msgid "GTMetrix"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:629
+msgid "Bingbot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:630
+msgid "Baiduspider"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:631
+msgid "Duckduckbot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:632
+msgid "Twitterbot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:633
+msgid "Applebot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:634
+msgid "Semrushbot"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:635
+msgid "WebPageTest"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:636
+msgid "Ahrefs"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:637
+msgid "Pingdom"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:638
+msgid "Seranking"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:639
+msgid "Motogpower"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:679
+msgid "Fast delay"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:680
+msgid "Slow delay"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:708
+msgid "Scroll"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:709
+msgid "Delay"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:716
+msgid "100 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:717
+msgid "200 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:718
+msgid "300 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:719
+msgid "500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:720
+msgid "600 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:721
+msgid "700 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:722
+msgid "800 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:723
+msgid "900 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:724
+msgid "1000 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:725
+msgid "1500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:726
+msgid "2000 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:727
+msgid "2500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:728
+msgid "3000 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:729
+msgid "3500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:730
+msgid "4000 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:731
+msgid "4500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:732
+msgid "5000 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:733
+msgid "5500 ms"
+msgstr ""
+
+#: src/Admin/Settings/Renderer/Setting.php:734
+msgid "6000 ms"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:37
+msgid "Registration email address for updates"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:38
+msgid ""
+"Enter the exact email address used to register on our site https://"
+"storejextensions.org. The email address is used to identify your account and "
+"the validity of the updates license. Free updates are included for 1 year "
+"from the date of the latest purchase. If your updates license is valid, a "
+"button to update the component in just one click will be shown in the "
+"control panel when new updates are available. More info about licensing and "
+"updates at our FAQ page https://storejextensions.org/faq.html"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:47
+msgid "Enable combining of CSS and Javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:48
+msgid ""
+"If enabled, multiple CSS or Javascript files will be combined into a single "
+"file or grouped in as few files as possible. This feature allows to reduce "
+"the number of HTTP requests, the total page size and loading time."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:51
+msgid "Combine CSS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:52
+msgid ""
+"If enabled, multiple CSS files will be combined into a single file. The "
+"single file will replace all the original multiple files."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:55
+msgid "Combine Javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:56
+msgid ""
+"If enabled, multiple Javascript files will be combined into a single file. "
+"In the case that it is necessary to exclude certain files while preserving "
+"the execution order, the files will be grouped in as few files as possible. "
+"Combined files will replace all the original multiple files, unless they "
+"have been excluded from the combine functionality."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:64
+msgid "Minify CSS"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:65
+msgid ""
+"Whitespaces and comments will be removed from the combined CSS file, this "
+"helps to reduce the file size, save bandwidth and improve the loading time. "
+"NOTICE: this applies only to resulting combined CSS files and not to "
+"original files, thus if the 'combine' feature is not enabled this setting "
+"won't have any effect."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:68
+msgid "Minify javascript"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:69
+msgid ""
+"Whitespaces and comments will be removed from the combined JS file, this "
+"helps to reduce the file size, save bandwidth and improve the loading time. "
+"NOTICE: this applies only to resulting combined JS files and not to original "
+"files, thus if the 'combine' feature is not enabled this setting won't have "
+"any effect."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:72
+msgid "Minify HTML"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:73
+msgid ""
+"Whitespaces and comments will be removed from the HTML source code, this "
+"helps to save bandwidth and improve the loading time."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:76
+msgid "HTML Minification level"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:77
+msgid ""
+"Choose the level of minification for HTML. Using the 'Low' level, multiple "
+"whitespaces outside of elements will be reduced to a single one. Using the "
+"'Normal' level comments and all not needed whitespaces or carriage returns "
+"will be removed. Using the 'High' level even quotes or double quotes from "
+"around attributes will be removed. CAUTION: using the 'High' level could "
+"cause issues with third-party plugins; if you experience this kind of "
+"problems switch back to 'Normal'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:86
+msgid "Cache lifetime"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:87
+msgid ""
+"You can set the cache lifetime in minutes for the combined files. If you're "
+"using a third-party Page Cache plugin, be sure to set this value higher than "
+"the lifetime set in the Page Cache plugin. If you experience issues with a "
+"huge amount of cache being generated, then decrease this value to reduce the "
+"cache size."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:90
+msgid "Combined Javascript at closing body tag"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:91
+msgid ""
+"If enabled, the combined Javascript file will be positioned at the bottom of "
+"the page just before the closing body tag. In the case that multiple "
+"combined Javascript files have been generated, only the last one will be "
+"placed at the bottom of the page. Additionally thanks to this option, even "
+"files positioned within the 'body' section will be included in the combined "
+"file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:94
+msgid "Load Javascript files asynchronously"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:95
+msgid ""
+"If enabled, Javascript will be loaded asyncronously to avoid render blocking "
+"resources. If there is only one combined file placed at the bottom of the "
+"page without any excluded script it will be loaded using the 'async' "
+"attribute. If instead there are excluded scripts and the order of execution "
+"must be preserved it will be loaded using the 'defer' attribute."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:98
+msgid "Visible text during fonts load"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:99
+msgid ""
+"If enabled, this function will fix the PageSpeed audit: 'Ensure text remains "
+"visible during webfont load'. The easiest way to avoid showing invisible "
+"text while custom fonts load is to temporarily show a system font. When this "
+"option is enabled a special CSS rule 'font-display: swap' will be included "
+"in each @font-face style, so that the flash of invisible text won't happen "
+"in most modern browsers. The font-display API specifies how a font is "
+"displayed, 'swap' tells the browser that text using the font should be "
+"displayed immediately using a system font. Once the custom font is ready, it "
+"replaces the system font."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:102
+msgid "Defer combined styles"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:103
+msgid ""
+"If enabled, the combined CSS file resulting from the merge of original ones "
+"will be loaded in a special 'preload' mode to eliminate render-blocking "
+"resources and improve the First Contentful Paint (FCP)."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:115
+msgid "Remove unused CSS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:116
+msgid ""
+"Select or add the CSS files that you want to remove. Be sure that they are "
+"optional or not used on the site."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:124
+msgid "Remove unused javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:125
+msgid ""
+"Select or add the Javascript files that you want to remove. Be sure that "
+"they are optional or not used on the site."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:133
+msgid "Add custom JS code"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:134
+msgid ""
+"If enabled, it's possible to include custom JS code within the compiled JS "
+"file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:137
+msgid "Custom JS code"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:138
+msgid "Enter the custom JS code to be included within the compiled JS file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:146
+msgid "Add custom CSS code"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:147
+msgid ""
+"If enabled, it's possible to include custom CSS code within the compiled CSS "
+"file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:150
+msgid "Custom CSS code"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:151
+msgid "Enter the custom CSS code to be included within the compiled CSS file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:169
+msgid "Enable page caching"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:170
+msgid ""
+"When page caching is enabled, pages are served up as static HTML versions of "
+"a page in order to avoid potentially time-consuming execution of your server "
+"and database. NOTE: this feature is enabled only for logged out users."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:173
+msgid "Platform specific cache"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:174
+msgid ""
+"Page caching can be different for mobile and desktop devices. Enable this "
+"option if you need to serve different contents through 2 separate cache."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:177
+msgid "Page cache lifetime"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:178
+msgid ""
+"The lifetime of the page cache. This value must be lower than the cache "
+"lifetime of combined files under the optimization settings."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:181
+msgid "Exclude page cache by URL"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:182
+msgid ""
+"Enter a substring of each url that you want to exclude from the page cache. "
+"It's not needed to enter the complete url for the matching, but only a part "
+"of it. Add a string and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:187
+msgid "Enable Instant Page <br/>preloading"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:188
+msgid ""
+"Instant Page uses just-in-time preloading. This feature, compatible with "
+"both desktop and mobile devices, preloads a page right before a user clicks "
+"on it. Pages are preloaded only when there's a good chance that a user will "
+"visit them, and only the HTML is preloaded, being respectful of your users "
+"and servers bandwidth and CPU. Preloading happens just a few milliseconds "
+"before than a user opens a page thanks to the special 'Prefetch' metatag, as "
+"a result Instant Page makes you pages feel instant to the human brain even "
+"on 3G."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:191
+msgid "Preload delay"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:192
+msgid ""
+"By default, Instant Page preloads 65 ms fast after hovering a link and when "
+"a mobile user starts touching their display. For some sites with a lot of "
+"huge click targets, it's possible to increase the delay on hover to preload "
+"150 ms slow."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:210
+msgid "Enable lazy-load for images and iframes"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:211
+msgid ""
+"Enable the lazy-load for images and iframes when the user scrolls down to "
+"view them. This feature reduces the loading time of the page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:214
+msgid "Autosize images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:215
+msgid ""
+"Enable this option if you experience an incorrect size of images or an empty "
+"space around them."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:218
+msgid "Enable effects"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:219
+msgid ""
+"If enabled, a fade-in effects will be applied to lazy-loaded images when "
+"they are scrolled into view."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:222
+msgid "Include iframes"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:223
+msgid "If enabled, also iframes will be lazy-loaded."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:226
+msgid "Include CSS background <br/> images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:227
+msgid ""
+"If enabled, also CSS background images will be lazy-loaded in the same way "
+"of normal images."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:230
+msgid "Include audio/video tags"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:231
+msgid "If enabled, also audio/video tags will be lazy-loaded."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:234
+msgid "Disable core lazy-load"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:235
+msgid ""
+"If enabled, the WordPress core lazy-load will be disabled. This is helpful "
+"to improve the LCP by disabling the lazy-load of images displayed above the "
+"fold."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:238
+msgid "Exclude images by URL"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:239
+msgid ""
+"Choose URLs of the images that you want to exclude from being lazy-loaded. "
+"It's possible to select a file name from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:242
+msgid "Exclude images by folder"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:243
+msgid ""
+"Choose folders of the images that you want to exclude from being lazy-"
+"loaded. It's possible to select a folder name from the list of options or "
+"specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:246
+msgid "Exclude images by CSS class"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:247
+msgid ""
+"Choose classes of the images that you want to exclude from being lazy-"
+"loaded. A class must be declared in the tag of an <span class=\"notranslate"
+"\">'&lt;img&gt;'</span> element. It's possible to select a class name or "
+"attribute from the list of options or specify additional ones and hit "
+"'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:255
+msgid "Enable lazy-loading for HTML elements"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:256
+msgid ""
+"Choose if enable the lazy-loading for HTML elements based on the CSS "
+"selectors parameter. This feature requires \"Minify HTML\" enabled in order "
+"to work."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:259
+msgid "CSS selectors for lazy-loaded elements"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:260
+msgid ""
+"Enter one or more CSS selectors comma separated to match certain HTML "
+"elements that should be lazy-loaded, for example using the selector 'img."
+"myclass,div.myclass'. This option could be useful for example to lazy-load "
+"the LCP element of a certain page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:263
+msgid "Lazy-load method"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:264
+msgid ""
+"Choose the preferred method used to reveal lazy-loaded elements. Hidden "
+"elements can be lazy-loaded using scrolling or a delay."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:267
+msgid "Lazy-load delay"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:268
+msgid ""
+"When the selected lazy-load method is 'Delay' then the lazy-loading of "
+"selected HTML elements will be delayed of a certain amount of milliseconds, "
+"by default it's delayed of 3000 ms. You can change this value based on best "
+"performance reported in the PageSpeed test."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:271
+msgid "Use CSS override"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:272
+msgid ""
+"If enabled, the special '!important' CSS override will be used to lazy-load "
+"a HTML elements. This may be needed if certain tags can't be lazy-loaded "
+"because of CSS styles included in the template that require to be overridden."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:290
+msgid "Combine background images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:291
+msgid ""
+"If enabled, images loaded through CSS background styles will be combined "
+"into one single image in order to reduce HTTP requests. NOTICE: the option "
+"'Combine CSS Files' must be enabled to have this feature working\"."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:294
+msgid "Image orientation"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:295
+msgid ""
+"Choose the best orientation used for images positioned inside the combined "
+"one."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:298
+msgid "Auto-format combined image"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:299
+msgid ""
+"If the size of the combined image exceeds 2000px, included images will be "
+"wrapped in a new row or column."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:302
+msgid "Exclude images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:303
+msgid ""
+"You can exclude certain images from the combine functionality in the case "
+"that they got broken or displayed incorrectly. It's possible to select a "
+"file name from the list of options or specify additional ones and hit "
+"'Enter'\"."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:306
+msgid "Include additional images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:307
+msgid ""
+"Images to be combined are crawled and selected automatically. In the case "
+"that you want to include additional images that have not been found "
+"automatically, you can enter them in this parameter. It's possible to select "
+"a file name from the list of options or specify additional ones and hit "
+"'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:325
+msgid "Enable HTTP/2 Server Push"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:326
+msgid ""
+"HTTP/2 Server Push allows an HTTP/2-compliant server to send resources to a "
+"HTTP/2-compliant client before the client requests them. It is, for the most "
+"part, a performance technique that can be helpful in loading resources "
+"preemptively. If this option is enabled, WPSpeed will communicate to the "
+"server to operate with this technique, keep in mind that this only works on "
+"a HTTP/2 compliant server."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:329
+msgid "Exclude asyncronous assets"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:330
+msgid ""
+"If enabled, assets that are deferred, loaded asynchronously or lazy-loaded "
+"will be excluded."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:333
+msgid "Include CDN files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:334
+msgid "Files loaded over your CDN domains will also be included."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:337
+msgid "File types"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:338
+msgid "Select the type of files to preload through HTTP/2."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:341
+msgid "Add custom files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:342
+msgid ""
+"It's possible to preload custom files adding their full path in this field. "
+"supported file types are: .js, .css, .webp, .gif, .png, .jpg, .woff, .woff2"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:345
+msgid "Exclude files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:346
+msgid ""
+"If you receive warnings in the browser console about preloaded files not "
+"used within a few seconds, you can exclude these files here."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:364
+msgid "Enable CDN"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:365
+msgid ""
+"If enabled, all static assets such as background images, Javascript, CSS "
+"files, etc will be loaded from a CDN domain. This requires that you have "
+"correctly setup a CDN for your website, you can configure up to 3 different "
+"CDN domains."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:368
+msgid "Preconnect browsers to CDN"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:369
+msgid ""
+"If enabled, the browser will perform an early preconnect to your CDN domains "
+"to speed up loading of subsequent resources."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:372
+msgid "CDN scheme"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:373
+msgid "Select the scheme for your CDN domain."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:376
+msgid "CDN Domain #1"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:377
+msgid "Enter the CDN domain #1."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:380
+msgid "CDN files #1"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:381
+msgid ""
+"Select file types that you want to be loaded over a CDN with the domain #1. "
+"It's possible to select a value from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:384
+msgid "CDN Domain #2"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:385
+msgid "Enter the CDN domain #2."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:388
+msgid "CDN files #2"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:389
+msgid ""
+"Select file types that you want to be loaded over a CDN with the domain #2. "
+"It's possible to select a value from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:392
+msgid "CDN Domain #3"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:393
+msgid "Enter the CDN domain #3."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:396
+msgid "CDN files #3"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:397
+msgid ""
+"Select file types that you want to be loaded over a CDN with the domain #3. "
+"It's possible to select a value from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:400
+msgid "Custom CDN extensions"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:401
+msgid ""
+"It's possible to add custom extensions for file types to load them through "
+"the CDN Domain #1. Add custom options and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:419
+msgid "Enable image optimization"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:420
+msgid ""
+"If images optimization is enabled, images will be compressed on the fly to "
+"reduce the bandwidth usage and speed up your site. NOTICE: the quality of "
+"images may be significantly decreased on large screens."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:423
+msgid "Minimum width for image optimization"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:424
+msgid ""
+"Choose the minimum width that images must have to be optimized. You should "
+"ignore small images that are already lightweight and don't need any kind of "
+"optimization."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:427
+msgid "Quality for compressed <br/>images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:428
+msgid ""
+"You can choose the image quality for resultimg optimized images. High value "
+"will mean a higher quality but also higher bandwidth usage."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:431
+msgid "Enable image resizing"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:432
+msgid ""
+"You can choose if images should be resized to a lower resolution to reduce "
+"size."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:435
+msgid "Resizing percentage"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:436
+msgid ""
+"Choose the percentage to which you want to down-size your images. For "
+"example if you have an image 1500px wide and apply a resizing percentage of "
+"50%, the image will be resized to 750px thus saving bandwidth."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:439
+msgid "Minimum width for resizing images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:440
+msgid ""
+"Choose the minimum width that images must have to be resized to a lower "
+"resolution. You should avoid to resize small images that are already "
+"lightweight and apply down-sizing only to large and heavyweight images."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:443
+msgid "Convert all images to WebP"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:444
+msgid ""
+"If enabled, all optimized images will be converted to the next generation "
+"WebP format. NOTICE: for this function to work the server PHP must include "
+"the GD library with the WebP support enabled and the 'imagewebp' function "
+"must be available, if this is missing on your server you can contact the "
+"hosting provider."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:447
+msgid "Convert all images to AVIF"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:448
+msgid ""
+"If enabled, all optimized images will be converted to the next generation "
+"AVIF format. NOTICE: for this function to work the server PHP must include "
+"the GD library with the AVIF support enabled and the 'imageavif' function "
+"must be available, if this is missing on your server you can contact the "
+"hosting provider. Commonly this feature is supported by PHP 8.1 and later."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:451
+msgid "Exclude images conversion for Safari"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:452
+msgid ""
+"If enabled, all optimized images will not be converted to the next "
+"generation WebP/AVIF format for Safari browser on iOS devices. Safari "
+"supports WebP images since version 16.0 and AVIF images since version 16.4. "
+"Keep this option enabled for maximum compatibility with older versions of "
+"the Safari browser."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:455
+msgid "Optimize CSS background <br/>images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:456
+msgid ""
+"If enabled, all images that are loaded through CSS files will also be "
+"optimized. The compiled CSS files will include new links to optimized "
+"images. This features requires CSS optimization to be enabled."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:459
+msgid "Optimize HTML background images"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:460
+msgid ""
+"If enabled, all images that are loaded through HTML inline styles for "
+"background will also be optimized. The minified HTML code will include new "
+"links to optimized images. This features requires HTML optimization to be "
+"enabled and set to 'High' level."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:463
+msgid "GIF images optimization"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:464
+msgid ""
+"Choose to optmize also GIF images on your site. Note that if this feature is "
+"enabled for animated GIF all animation frames will be lost."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:467
+msgid "Lossless optimization"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:468
+msgid ""
+"If enabled, all images will be converted using a lossless compression "
+"provided by the third-party Resmush WebService https://resmush.it. NOTICE: "
+"using this system images won't never be resized, the parameter 'Quality for "
+"compressed images' is applied only to JPG images and the conversion to the "
+"WebP format won't have any effect. Although it's possible to generate a "
+"srcset using this method it doesn't make much sense, indeed all images of "
+"the srcset will have the same size and quality."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:471
+msgid "Hash method of images name"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:472
+msgid ""
+"Choose the preferred method for the hash generation of the image name. The "
+"'full' method totally replaces the name of an image with a full hash. The "
+"'partial' method concatenates a hash to the original name of an image. The "
+"'none' method leaves the original name of an image unaltered, but pay "
+"attention that not using a hash could cause names collision if you have "
+"different images with the same name."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:475
+msgid "Exclude image extensions"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:476
+msgid ""
+"Choose by file extension if some image types should be excluded from the "
+"resizing process."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:479
+msgid "Exclude images by name/path"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:480
+msgid ""
+"If you need to exclude certain images from the optimization process you can "
+"enter a substring of the name or path to keep the original one. For example "
+"if you want to exclude an image at the following path: 'images/socials/"
+"mycustomimage.png' it's enough to enter 'socials' to exclude the entire "
+"folder or 'custom' to exclude an image named 'mycustomname.png'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:483
+msgid "Exclude images by class"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:484
+msgid ""
+"Choose classes of the images that you want to exclude from being optimized. "
+"A class must be declared in the attribute of an '&lt;img&gt;' element. It's "
+"possible to select a class name from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:487
+msgid "Exclude images optimization by page URL"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:488
+msgid ""
+"Enter a substring of each url that you want to exclude from the images "
+"optimization. It's not needed to enter the complete url for the matching, "
+"but only a part of it. Add a string and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:491
+msgid "Process 'data-src' attribute"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:492
+msgid ""
+"If enabled, when the special 'data-src' attribute of an image is present, it "
+"will be set to point to the optimized image. This can be useful for example "
+"for galleries that use this special attribute in order to load the optimized "
+"image instead that the original one\"."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:495
+msgid "Add size attributes"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:498
+msgid "Decode HTML entities"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:499
+msgid ""
+"If enabled, UTF-8 characters will be decoded and preserved without encoding "
+"entities."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:502
+msgid "Decode UTF-8 HTML entities"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:503
+msgid ""
+"If enabled, UTF-8 characters will be decoded into HTML entities. Enable this "
+"option if you experience characters on the page that are wrongly encoded."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:506
+msgid "Purify string"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:507
+msgid ""
+"If you experience weird errors such as javascript code inside the page "
+"content caused by a certain script word or tag, you can specify that string "
+"in this parameter in order to remove it and avoid the conflict. This field "
+"supports regular expressions and automatically adds the escape slash to the "
+"'/' special character."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:510
+msgid "Replacement string"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:511
+msgid ""
+"You can specify an alternative string used to replace the purified string. "
+"By default it will be completely removed and replaced with an empty string."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:516
+msgid "Create srcset"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:517
+msgid ""
+"If enabled, an additional HTML5 'srcset' attribute will be added for each "
+"image that need to be optimized and WPSpeed will automatically create up to "
+"4 differently-sized images as variations to the base image. The browser will "
+"pick up the most correct image based on the device screen size and "
+"resolution. IMPORTANT: if you activate this feature, images may be enlarged "
+"to full width because the srcset doesn't render images based on its own "
+"width but based on the total width of the container element; as a result you "
+"may need to rework your CSS and apply a 'max-width' to the various images "
+"displayed via a srcset."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:520
+msgid "Initial quality value"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:521
+msgid ""
+"Choose the value of the initial quality used for the image with the highest "
+"resolution of the srcset and for the regular fallback img tag. Clear the "
+"plugin cache after that you have changed this setting."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:524
+msgid "Quality decrease"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:525
+msgid ""
+"Choose the amount of quality decrease that each srcset image should have. "
+"Starting from the highest quality image there will be 3 more images with a "
+"lower quality reduced by this value. Clear the plugin cache after that you "
+"have changed this setting."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:528
+msgid "Initial resizing value"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:529
+msgid ""
+"Choose the value of the initial resizing used for the image with the largest "
+"size of the srcset and for the regular fallback img tag. Clear the plugin "
+"cache after that you have changed this setting."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:532
+msgid "Resizing decrease"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:533
+msgid ""
+"Choose the amount of resizing decrease that each srcset image should have. "
+"Starting from the biggest image there will be 3 more smaller images reduced "
+"by this value. Clear the plugin cache after that you have changed this "
+"setting."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:536
+msgid "Standard image 'src'"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:537
+msgid ""
+"You can choose which image to use for the standard 'src' attribute used as a "
+"fallback for browsers that don't support srcset. Choosing a lower resolution "
+"image for the 'src' attribute could be helpful to reach a higher score "
+"during the PageSpeed test."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:555
+msgid "Enable extraction"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:556
+msgid ""
+"Enable the extraction of basic CSS styles and load them above the fold to "
+"avoid render blocking resources."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:559
+msgid "Number of elements"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:560
+msgid ""
+"Select the number of HTML elements from the top of the page that you want to "
+"analyze to find the basic CSS to be extracted from."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:563
+msgid "Remove unused CSS"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:564
+msgid ""
+"If enabled, the plugin will 'lazy-load' the unused CSS to prevent "
+"unnecessary processing before than the page is loaded."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:567
+msgid "CSS selectors"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:568
+msgid ""
+"It could be necessary to extract the basic CSS for some custom elements. Add "
+"any substring from the CSS declaration here to have them included in the "
+"extracted CSS code and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:571
+msgid "Exclude extraction by page URL"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:572
+msgid ""
+"Enter a substring of each url that you want to exclude from the CSS "
+"extraction. It's not needed to enter the complete url for the matching, but "
+"only a part of it. Add a string and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:580
+msgid "Enable DOM reduction"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:581
+msgid ""
+"Enable the reduction of DOM tree. If you experience conflicts or "
+"malfuctioning keep this feature disabled."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:584
+msgid "HTML tags to load asynchronously"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:585
+msgid "Select which HTML elements you want to load asynchronously."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:590
+msgid "Clear server cache (Varnish)"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:591
+msgid ""
+"If enabled, when the plugin clears its own cache it will also try to "
+"invalidate a server side caching system, such as Varnish, by making a PURGE "
+"request. This could be needed to keep synced the cache cleaning between the "
+"static files generated by the plugin and the server side cache."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:594
+msgid "Cache encryption"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:595
+msgid ""
+"If enabled, all cached files will be encrypted by PHP and it won't be "
+"possible to read contents. This option could slow down performance and "
+"increase the cache size."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:598
+msgid "Debug Plugin"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:599
+msgid ""
+"This option will enable the debug mode that adds the url of the original "
+"files inside the combined and optimized file generated by WPSpeed and enable "
+"the log system at the path \"root/wp-content/plugins/wpspeed/logs\". This is "
+"useful to identify and resolve conflicts."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:602
+msgid "Order plugins"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:603
+msgid ""
+"If enabled, the plugin automatically ensures the correct execution order "
+"with other popular caching plugins."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:606
+msgid "Handle Javascript errors"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:607
+msgid ""
+"If you get Javascript errors in the browser console, you can try to enable "
+"this option to execute each combined Javascript file within a try-catch "
+"block."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:625
+msgid "Include all assets"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:626
+msgid ""
+"If enabled, all files managed by third-party plugins and external domains "
+"will be included in the combined file."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:629
+msgid "Include imported CSS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:630
+msgid ""
+"If you have CSS files that use @import statements, when this option is "
+"enabled the contents of each referenced resource will be fetched and "
+"directly included in the containing file to speed up delivering of all "
+"styles."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:633
+msgid "Include PHP and external files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:634
+msgid ""
+"If enabled, dynamic Javascript and CSS files having a '.php' file extension "
+"and files pointing to external domains will be included in the combined "
+"file. This feature requires the 'PHP CURL' library or 'allow_url_fopen' "
+"enabled on your server for PHP."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:637
+msgid "Include inline CSS styles"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:638
+msgid ""
+"If enabled, inline CSS styles will be included in the combined CSS file in "
+"the same order that they appear in the page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:641
+msgid "Include inline scripts"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:642
+msgid ""
+"If enabled, inline Javascript scripts will be included in the combined JS "
+"files in the same order that they appear in the page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:660
+msgid "Exclude CSS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:661
+msgid ""
+"Select the CSS files that you want to exclude from the combine "
+"functionality. It's possible to select a file name from the list of options "
+"or specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:664
+msgid "Exclude CSS files by plugin"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:665
+msgid ""
+"All CSS files that belong to the chosen extensions will be excluded from the "
+"combine functionality. It's possible to select an extension name from the "
+"list of options or specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:668
+msgid "Exclude inline \"style\" <br/>declarations"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:669
+msgid ""
+"Select an inline 'style' declaration that you want to exclude from the "
+"combine functionality, you can type in a substring of the style tag or "
+"content that you want to exclude."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:672
+msgid "Exclude all inline \"style\" declarations"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:673
+msgid ""
+"Exclude all inline 'style' declaration from the combine functionality. This "
+"could reduce the amount of cache if there are inline styles that change "
+"continuously."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:681
+msgid "Exclude Javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:682
+msgid ""
+"Select the Javascript files that you want to exclude from the combine "
+"functionality preserving the execution order as they appear on the page. "
+"It's possible to select a file name from the list of options or specify "
+"additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:685
+#: src/Admin/Settings/TabSettings.php:706
+msgid "Exclude Javascript files <br/>by plugin"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:686
+msgid ""
+"All Javascript files that belong to the chosen plugin will be excluded from "
+"the combine functionality preserving the execution order as they appear on "
+"the page. It's possible to select a plugin name from the list of options or "
+"specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:689
+#: src/Admin/Settings/TabSettings.php:710
+msgid "Exclude inline \"script\" <br/>declarations"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:690
+#: src/Admin/Settings/TabSettings.php:711
+msgid ""
+"Select an inline 'script' declarations that you want to exclude from the "
+"combine functionality, you can type in a substring of the script tag or "
+"content that you want to exclude."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:693
+msgid "Exclude all inline \"script\" declarations"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:694
+msgid ""
+"Exclude all inline 'script' declaration from the combine functionality. This "
+"could reduce the amount of cache if there are inline styles that change "
+"continuously."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:702
+msgid "Exclude javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:703
+msgid ""
+"Select the Javascript files that you want to exclude from the combine "
+"functionality without preserving the execution order as they appear on the "
+"page. It's possible to select a file name from the list of options or "
+"specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:707
+msgid ""
+"All Javascript files that belong to the chosen plugin will be excluded from "
+"the combine functionality without preserving the execution order as they "
+"appear on the page. It's possible to select a plugin name from the list of "
+"options or specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:719
+msgid "Exclude urls"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:720
+msgid ""
+"Enter a substring of each url that you want to exclude from the plugin "
+"optimization. It's not needed to enter the complete url for the matching, "
+"but only a part of it. Add a string and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:723
+msgid "Exclude logged in users"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:724
+msgid ""
+"If enabled, the plugin will be disabled for all users that are logged in."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:732
+msgid "Javascript files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:733
+msgid ""
+"Excluded Javascript files are commonly moved to the bottom of the page. In "
+"the case of conflicts, it's possible to enter them in this setting to keep "
+"the original position in the page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:736
+msgid "Inline scripts"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:737
+msgid ""
+"Excluded scripts are commonly moved to the bottom of the page. In the case "
+"of conflicts, it's possible to enter them in this setting to keep the "
+"original position in the page."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:754
+msgid "Enable Adaptive Contents"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:755
+msgid ""
+"If the Adaptive Contents feature is enabled it's possible to remove certain "
+"parts of HTML or CSS/JS files only for bots and page speed tools. This makes "
+"it possible to raise the page speed score without losing website "
+"functionality for regular visitors."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:758
+msgid ""
+"CSS selectors for elements to remove <span style='font-size:11px;font-weight:"
+"bold'>(Requires 'Minify HTML' enabled)</span>"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:759
+msgid ""
+"Enter one or more CSS selectors comma separated to match certain HTML "
+"elements that you want to remove from the page when visited by bots and page "
+"speed tools, for example using the selector 'div.myclass'. This is "
+"especially useful if you need to remove elements causing a high CLS value. "
+"Note that this feature requires the 'Minify HTML' option to be enabled."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:762
+msgid "Bots user-agent strings"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:763
+msgid ""
+"List of user-agent strings used by bots and page speed tools that need to be "
+"excluded. Just enter a single part of the user-agent string to select it as "
+"a regular expression is used."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:766
+msgid "Remove JS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:767
+msgid ""
+"It's possible to completely remove certain JS files from the page only for "
+"bots and page speed tools to improve the following PageSpeed tests: "
+"'Minimize main-thread work', 'Reduce Javascript execution time' and 'Avoid "
+"enormous network payloads'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:770
+msgid "Select JS files to remove"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:771
+msgid ""
+"Select the Javascript files that you want to completely remove from the page "
+"for bots and page speed tools. It's possible to select a file name from the "
+"list of options or specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:774
+msgid "Remove CSS files"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:775
+msgid ""
+"It's possible to completely remove certain CSS files from the page only for "
+"bots and page speed tools to improve the following PageSpeed tests: "
+"'Minimize main-thread work' and 'Avoid enormous network payloads'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:778
+msgid "Select CSS files to remove"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:779
+msgid ""
+"Select the CSS files that you want to completely remove from the page only "
+"for bots and page speed tools. It's possible to select a file name from the "
+"list of options or specify additional ones and hit 'Enter'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:782
+msgid "Remove all JS"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:783
+msgid "If enabled, all JS code will be removed for bots and page speed tools."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:786
+msgid "Remove all CSS"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:787
+msgid "If enabled, all CSS code will be removed for bots and page speed tools."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:790
+msgid "Essential CSS code"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:791
+msgid ""
+"It's possible to add a piece of essential CSS code that should be present in "
+"the lightweight version of a page generated with Adaptive Contents for bots "
+"and page speed tools. This is valuable, for example, if you choose to remove "
+"all CSS but still need some styles to preserve a basic layout or if you "
+"experience warnings in Google Search Console about 'Mobile Usability Issue - "
+"Content Wider Than Screen & Clickable Element Too Close'."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:794
+msgid "Add size attributes only for bots"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:795
+msgid ""
+"If you have enabled the option 'Add size attributes' under the 'Images "
+"optimization' tab, it's possible to choose to add the size attributes for "
+"images only for bots using the 'Adaptive Contents' feature. This is useful "
+"if you experience issues with the size of images being stretched on the "
+"website."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:798
+msgid "Optimize images only for bots"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:799
+msgid ""
+"If you have enabled the 'Images optimization' feature, it's possible to "
+"choose to optimize images only for bots using the 'Adaptive Contents' "
+"feature. This is useful if you experience issues or page conflicts with the "
+"images optimization on the website."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:802
+msgid "Extract 'Above-the-fold' CSS only for bots"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:803
+msgid ""
+"If you have enabled the 'Extract Above-the-fold CSS' feature, it's possible "
+"to choose to run this only for bots using the 'Adaptive Contents' feature. "
+"This is useful if you experience issues or page conflicts with CSS on the "
+"website."
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:816
+msgid "Choose optimization level"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:817
+msgid "Select an optimization level for the auto configuration"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:821
+msgid "Google PageSpeed score"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:822
+msgid "Test your website to evaluate your Google PageSpeed score"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:826
+msgid "Page URL to test"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:827
+msgid ""
+"Enter the URL of the page to test, if the field is left empty then the home "
+"page URL will be used"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:831
+msgid "Custom Google PageSpeed ApiKey"
+msgstr ""
+
+#: src/Admin/Settings/TabSettings.php:832
+msgid ""
+"It's possible to enter a custom Google PageSpeed ApiKey, if the field is "
+"left empty then the built in ApiKey will be used"
+msgstr ""
+
+#: src/Admin/templates/admin/index.php:9
+msgid "WPSpeed"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:30
+#, php-format
+msgid "Cache files: %s"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:31
+#, php-format
+msgid "Cache size: %s"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:41
+msgid "Auto Configuration"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:55
+msgid "Assets Inclusions"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:62
+msgid "Assets Exclusions"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:69
+msgid "Lazy Load"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:76
+msgid "Optimize Images"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:83
+msgid "Adaptive Contents"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:97
+msgid "Assets Management"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:104
+msgid "Http/2"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:111
+msgid "Combine Images"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:118
+msgid "CDN"
+msgstr ""
+
+#: src/Admin/templates/compiled/6833b7cdb4743737177b42f3f165314401de122f.php:125
+msgid "Advanced"
+msgstr ""
+
+#: src/Core/Platform/Cache.php:152
+msgid "Error writing files to cache"
+msgstr ""
+
+#: src/Core/Platform/Html.php:61
+msgid ""
+"Load or refresh the front-end site first then refresh this page to populate "
+"the multi select exclude lists."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WPSpeed PRO"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://storejextensions.org/extensions/wpspeed.html"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WPSpeed allows your website to reach the maximum score and performance on "
+"Google PageSpeed Insights, GTmetrix and Core Web Vitals. If you experience "
+"issues or poor results it's just a matter of finding the correct plugin "
+"configuration, contact us at <a href=\"mailto:wpspeed@storejextensions.org"
+"\">wpspeed@storejextensions.org</a> to allow our expertise team to configure "
+"the plugin as best as possible. You can also get our < a href=\"https://"
+"storejextensions.org/wordpress-speed-performance-service.html\">Optimization "
+"Service</a> to boost performance of your Wordpress site thanks to our "
+"expertise team."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "JExtensions Store"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://storejextensions.org"
+msgstr ""
