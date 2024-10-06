@@ -150,6 +150,9 @@ class Setting {
 	public static function pro_remove_unused_css() {
 		echo Html::_ ( 'radio', 'pro_remove_unused_css', '0' );
 	}
+	public static function optimizeCssDeliveryExcludeFontface() {
+		echo Html::_ ( 'radio', 'optimizeCssDeliveryExcludeFontface', '1' );
+	}
 	public static function pro_dynamic_selectors() {
 		echo Html::_ ( 'multiselect', 'pro_dynamic_selectors', [ ], 'selectors', 'style' );
 	}

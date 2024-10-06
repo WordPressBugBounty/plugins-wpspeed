@@ -553,6 +553,10 @@ class TabSettings {
 								__ ( 'Remove unused CSS', 'wpspeed' ),
 								__ ( 'If enabled, the plugin will \'lazy-load\' the unused CSS to prevent unnecessary processing before than the page is loaded.', 'wpspeed' )
 						],
+						'optimizeCssDeliveryExcludeFontface' => [
+								__ ( 'Exclude @font-face', 'wpspeed' ),
+								__ ( 'If enabled, the extracted \'Above-the-fold\' CSS code will not include any external font, futher improving performance.', 'wpspeed' )
+						],
 						'pro_dynamic_selectors' => [ 
 								__ ( 'CSS selectors', 'wpspeed' ),
 								__ ( 'It could be necessary to extract the basic CSS for some custom elements. Add any substring from the CSS declaration here to have them included in the extracted CSS code and hit \'Enter\'.', 'wpspeed' )

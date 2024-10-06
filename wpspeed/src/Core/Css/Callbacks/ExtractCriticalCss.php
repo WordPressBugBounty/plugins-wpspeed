@@ -39,16 +39,15 @@ class ExtractCriticalCss extends CallbackBase implements LoggerAwareInterface
 		if ( $sContext == 'font-face' || $sContext == 'keyframes' )
 		{
 			if ( ! $this->bPostProcessing )
-			{//If we're not processing font-face or keyframes yet let's just save them for later until after we've done getting all the
-				// critical css
-
+			{
+				// If we're not processing font-face or keyframes yet let's just save them for later until after we've done getting all the critical css
 				$this->sPostCss .= $aMatches[0];
 
 				return '';
 			}
 			else
 			{
-				if ( $sContext == 'font-face' )
+				if ( $sContext == 'font-face' && !Plugin::getPluginParams()->get('optimizeCssDeliveryExcludeFontface', 1))
 				{
 					preg_match( '#font-family\s*+:\s*+[\'"]?(' . Parser::STRING_VALUE() . '|[^;}]++)[\'"]?#i', $aMatches[0], $aM );
 
