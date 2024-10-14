@@ -7,7 +7,7 @@ Stable tag: trunk
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-WPSpeed is the most complete, powerful and unique Wordpress plugin that is capable to optimize your website for Google PageSpeed and **reach a score of 100 on mobile!** 
+WPSpeed is the most complete, powerful and unique plugin capable to optimize your website for Google PageSpeed and **reach a score of 100 on mobile!**
 
 == Description ==
 
