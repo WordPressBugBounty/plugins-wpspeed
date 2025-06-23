@@ -138,7 +138,8 @@ class Paths implements PathsInterface
 	 */
 	public static function adminController( $name )
 	{
-		return add_query_arg( array( 'task' => $name ), admin_url( 'options-general.php?page=wpspeed' ) );
+		$nonce = wp_create_nonce($name);
+		return add_query_arg( array( 'task' => $name, '_wpnonce' => $nonce ), admin_url( 'options-general.php?page=wpspeed' ) );
 	}
 
 	/**

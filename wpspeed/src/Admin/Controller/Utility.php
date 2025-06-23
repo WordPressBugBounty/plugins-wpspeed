@@ -29,6 +29,10 @@ class Utility extends Controller
 
 	public function browsercaching()
 	{
+		if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'browsercaching')) {
+			wp_die(__( 'Not authorized' ));
+		}
+		
 		$expires = Tasks::leverageBrowserCaching();
 
 		if ( $expires === false )
@@ -63,6 +67,10 @@ class Utility extends Controller
 
 	public function restorehtaccess()
 	{
+		if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'restorehtaccess')) {
+			wp_die(__( 'Not authorized' ));
+		}
+		
 		$cleanedHtaccess = Tasks::cleanHtaccess();
 		
 		if ( $cleanedHtaccess === false )
@@ -81,6 +89,10 @@ class Utility extends Controller
 	
 	public function orderplugins()
 	{
+		if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'orderplugins')) {
+			wp_die(__( 'Not authorized' ));
+		}
+		
 		Dispatcher::orderPlugin();
 
 		$this->setMessage( __( 'Plugins ordered successfully', 'wpspeed' ), 'success' );
@@ -91,6 +103,10 @@ class Utility extends Controller
 
 	public function keycache()
 	{
+		if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'keycache')) {
+			wp_die(__( 'Not authorized' ));
+		}
+		
 		Tasks::generateNewCacheKey();
 
 		$this->setMessage( __( 'New cache key generated!', 'wpspeed' ), 'success' );
@@ -101,6 +117,10 @@ class Utility extends Controller
 
 	public function cleancache()
 	{
+		if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'cleancache')) {
+			wp_die(__( 'Not authorized' ));
+		}
+		
 		if ( Cache::deleteCache() )
 		{
 			$this->setMessage( __( 'Cache deleted successfully!', 'wpspeed' ), 'success' );

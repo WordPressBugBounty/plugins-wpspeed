@@ -1,7 +1,7 @@
 === WPSpeed ===
 
 Tags: performance, pagespeed, cache, optimize, seo
-Tested up to: 6.6
+Tested up to: 6.8
 Requires PHP: 7.2
 Stable tag: trunk
 License: GPLv3 or later
