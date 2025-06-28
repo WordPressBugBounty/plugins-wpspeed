@@ -4,7 +4,7 @@
  * Plugin Name: WPSpeed
  * Plugin URI: https://storejextensions.org/extensions/wpspeed.html
  * Description: WPSpeed allows your website to reach the maximum score and performance on Google PageSpeed Insights, GTmetrix and Core Web Vitals. <a href="https://storejextensions.org/extensions/wpspeed.html">Upgrade to PRO</a> to unlock all pages of the website, the FREE version is limited to the home page only. You can also get our <a href="https://storejextensions.org/wordpress-speed-performance-service.html">Optimization Service</a> to boost performance of your Wordpress site thanks to our expertise team.
- * Version: 2.6.5
+ * Version: 2.6.6
  * Author: JExtensions Store
  * Author URI: https://storejextensions.org
  * License: GNU/GPLv3
