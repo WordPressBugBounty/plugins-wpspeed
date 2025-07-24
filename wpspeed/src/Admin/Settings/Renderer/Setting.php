@@ -635,7 +635,8 @@ class Setting {
 				'ahrefs' => __ ( 'Ahrefs', 'wpspeed' ),
 				'pingdom' => __ ( 'Pingdom', 'wpspeed' ),
 				'seranking' => __ ( 'Seranking', 'wpspeed' ),
-				'moto g power' => __ ( 'Motogpower', 'wpspeed' )
+				'moto g power' => __ ( 'Motogpower', 'wpspeed' ),
+				'rsiteauditor' => __ ( 'RSiteAuditor', 'wpspeed' )
 		];
 
 		echo Html::_ ( 'multiselect', 'adaptive_contents_bots_list', array_keys ( $aOptions ), 'none', 'value' );

@@ -3,7 +3,7 @@
 Tags: performance, pagespeed, cache, optimize, seo
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 2.6.6
+Stable tag: 2.6.7
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -115,6 +115,7 @@ Upload the WPSpeed plugin to your blog. Activate it, then configure settings to 
 = 2.6 =
 * Added 'Above-the-fold' CSS extraction
 
-= 2.6.5 FREE / 2.7 PRO =
+= 2.6.7 FREE / 2.7 PRO =
 * Added feature to defer combined CSS
 * Added feature to purge server cache
+* Added support to Ubersuggest

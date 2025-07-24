@@ -89,7 +89,8 @@ class CombineJsCss extends CallbackBase
 					'ahrefs',
 					'pingdom',
 					'seranking',
-					'moto g power'
+					'moto g power',
+					'rsiteauditor'
 			) );
 			if (! empty ( $botsList )) {
 				foreach ( $botsList as &$bot ) {
