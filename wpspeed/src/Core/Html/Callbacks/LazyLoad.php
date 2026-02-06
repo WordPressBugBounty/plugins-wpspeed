@@ -133,6 +133,64 @@ class LazyLoad extends CallbackBase
 							$this->bExcluded = true;
 						}
 
+						// Check if we need to add eager fetchpriority high async loading for excluded images here
+						if ( $this->oParams->get( 'pro_excludeLazyLoadApplyFetchPriority', 0 ) && $sElementName === 'img' ) {
+							$sReturn = $sFullMatch;
+							
+							// loading="eager" (override or add)
+							if ( preg_match( '#\sloading\s*=\s*["\'][^"\']*["\']#i', $sReturn ) ) {
+								$sReturn = preg_replace(
+										'#\sloading\s*=\s*["\'][^"\']*["\']#i',
+										' loading="eager"',
+										$sReturn,
+										1
+										);
+							} else {
+								$sReturn = preg_replace(
+										'#<img\b#i',
+										'<img loading="eager"',
+										$sReturn,
+										1
+										);
+							}
+							
+							// fetchpriority="high" (override or add)
+							if ( preg_match( '#\sfetchpriority\s*=\s*["\'][^"\']*["\']#i', $sReturn ) ) {
+								$sReturn = preg_replace(
+										'#\sfetchpriority\s*=\s*["\'][^"\']*["\']#i',
+										' fetchpriority="high"',
+										$sReturn,
+										1
+										);
+							} else {
+								$sReturn = preg_replace(
+										'#<img\b#i',
+										'<img fetchpriority="high"',
+										$sReturn,
+										1
+										);
+							}
+							
+							// decoding="async" (override or add)
+							if ( preg_match( '#\sdecoding\s*=\s*["\'][^"\']*["\']#i', $sReturn ) ) {
+								$sReturn = preg_replace(
+										'#\sdecoding\s*=\s*["\'][^"\']*["\']#i',
+										' decoding="async"',
+										$sReturn,
+										1
+										);
+							} else {
+								$sReturn = preg_replace(
+										'#<img\b#i',
+										'<img decoding="async"',
+										$sReturn,
+										1
+										);
+							}
+							
+							return $sReturn;
+						}
+						
 						return $sFullMatch;
 					}
 

@@ -19,114 +19,124 @@
     	var addListeners = function(initialize) {
     		var optimizationLevelSettings = {
     				1 : {
-    					'wpspeed_settings_html_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_html_minify1'},
+    					'wpspeed_settings_html_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_html_minify1'},
     					'wpspeed_settings_html_minify_level' : '0',
-    					'wpspeed_settings_combine_files_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_combine_files_enable1'},
-    					'wpspeed_settings_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_css1'},
-    					'wpspeed_settings_javascript0' : {'action' : 'click', 'target' : 'wpspeed_settings_javascript0'},
-    					'wpspeed_settings_font_display_swap0' : {'action' : 'click', 'target' : 'wpspeed_settings_font_display_swap0'},
-    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'click', 'target' : 'wpspeed_settings_defer_combined_styles0'},
-    					'wpspeed_settings_css_minify0' : {'action' : 'click', 'target' : 'wpspeed_settings_css_minify0'},
-    					'wpspeed_settings_js_minify0' : {'action' : 'click', 'target' : 'wpspeed_settings_js_minify0'},
-    					'wpspeed_settings_bottom_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_bottom_js0'},
-    					'wpspeed_settings_lazyload_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_lazyload_enable0'},
-    					'wpspeed_settings_lightimgs_status0' : {'action' : 'click', 'target' : 'wpspeed_settings_lightimgs_status0'},
-    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
-    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
-    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
-    					'wpspeed_settings_cache_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_cache_enable0'},
-    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
-    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
+    					'wpspeed_settings_combine_files_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_combine_files_enable1'},
+    					'wpspeed_settings_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_css1'},
+    					'wpspeed_settings_javascript0' : {'action' : 'change', 'target' : 'wpspeed_settings_javascript0'},
+    					'wpspeed_settings_font_display_swap0' : {'action' : 'change', 'target' : 'wpspeed_settings_font_display_swap0'},
+    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'change', 'target' : 'wpspeed_settings_defer_combined_styles0'},
+    					'wpspeed_settings_css_minify0' : {'action' : 'change', 'target' : 'wpspeed_settings_css_minify0'},
+    					'wpspeed_settings_js_minify0' : {'action' : 'change', 'target' : 'wpspeed_settings_js_minify0'},
+    					'wpspeed_settings_bottom_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_bottom_js0'},
+    					'wpspeed_settings_lazyload_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_lazyload_enable0'},
+    					'wpspeed_settings_lightimgs_status0' : {'action' : 'change', 'target' : 'wpspeed_settings_lightimgs_status0'},
+						'wpspeed_settings_img_attributes_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_img_attributes_enable0'}, 
+    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
+    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
+    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
+						'wpspeed_settings_adaptive_contents_add_size_attributes0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_add_size_attributes0'},
+    					'wpspeed_settings_cache_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_cache_enable0'},
+    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
+    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
     				},
     				2 : {
-    					'wpspeed_settings_html_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_html_minify1'},
+    					'wpspeed_settings_html_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_html_minify1'},
     					'wpspeed_settings_html_minify_level' : '1',
-    					'wpspeed_settings_combine_files_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_combine_files_enable1'},
-    					'wpspeed_settings_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_css1'},
-    					'wpspeed_settings_javascript1' : {'action' : 'click', 'target' : 'wpspeed_settings_javascript1'},
-    					'wpspeed_settings_font_display_swap1' : {'action' : 'click', 'target' : 'wpspeed_settings_font_display_swap1'},
-    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'click', 'target' : 'wpspeed_settings_defer_combined_styles0'},
-    					'wpspeed_settings_css_minify0' : {'action' : 'click', 'target' : 'wpspeed_settings_css_minify0'},
-    					'wpspeed_settings_js_minify0' : {'action' : 'click', 'target' : 'wpspeed_settings_js_minify0'},
-    					'wpspeed_settings_bottom_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_bottom_js0'},
-    					'wpspeed_settings_lazyload_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_lazyload_enable0'},
-    					'wpspeed_settings_lightimgs_status0' : {'action' : 'click', 'target' : 'wpspeed_settings_lightimgs_status0'},
-    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
-    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
-    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
-    					'wpspeed_settings_cache_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_cache_enable0'},
-    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
-    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
+    					'wpspeed_settings_combine_files_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_combine_files_enable1'},
+    					'wpspeed_settings_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_css1'},
+    					'wpspeed_settings_javascript1' : {'action' : 'change', 'target' : 'wpspeed_settings_javascript1'},
+    					'wpspeed_settings_font_display_swap1' : {'action' : 'change', 'target' : 'wpspeed_settings_font_display_swap1'},
+    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'change', 'target' : 'wpspeed_settings_defer_combined_styles0'},
+    					'wpspeed_settings_css_minify0' : {'action' : 'change', 'target' : 'wpspeed_settings_css_minify0'},
+    					'wpspeed_settings_js_minify0' : {'action' : 'change', 'target' : 'wpspeed_settings_js_minify0'},
+    					'wpspeed_settings_bottom_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_bottom_js0'},
+    					'wpspeed_settings_lazyload_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_lazyload_enable0'},
+    					'wpspeed_settings_lightimgs_status0' : {'action' : 'change', 'target' : 'wpspeed_settings_lightimgs_status0'},
+						'wpspeed_settings_img_attributes_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_img_attributes_enable0'},
+    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
+    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
+    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
+						'wpspeed_settings_adaptive_contents_add_size_attributes0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_add_size_attributes0'},
+    					'wpspeed_settings_cache_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_cache_enable0'},
+    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
+    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
     				},
     				3 : {
-    					'wpspeed_settings_html_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_html_minify1'},
+    					'wpspeed_settings_html_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_html_minify1'},
     					'wpspeed_settings_html_minify_level' : '1',
-    					'wpspeed_settings_combine_files_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_combine_files_enable1'},
-    					'wpspeed_settings_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_css1'},
-    					'wpspeed_settings_javascript1' : {'action' : 'click', 'target' : 'wpspeed_settings_javascript1'},
-    					'wpspeed_settings_font_display_swap1' : {'action' : 'click', 'target' : 'wpspeed_settings_font_display_swap1'},
-    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'click', 'target' : 'wpspeed_settings_defer_combined_styles0'},
-    					'wpspeed_settings_css_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_css_minify1'},
-    					'wpspeed_settings_js_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_js_minify1'},
-    					'wpspeed_settings_bottom_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_bottom_js0'},
-    					'wpspeed_settings_lazyload_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_lazyload_enable1'},
-    					'wpspeed_settings_lightimgs_status0' : {'action' : 'click', 'target' : 'wpspeed_settings_lightimgs_status0'},
-    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
-    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
-    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
-    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
-    					'wpspeed_settings_cache_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_cache_enable0'},
-    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
-    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
+    					'wpspeed_settings_combine_files_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_combine_files_enable1'},
+    					'wpspeed_settings_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_css1'},
+    					'wpspeed_settings_javascript1' : {'action' : 'change', 'target' : 'wpspeed_settings_javascript1'},
+    					'wpspeed_settings_font_display_swap1' : {'action' : 'change', 'target' : 'wpspeed_settings_font_display_swap1'},
+    					'wpspeed_settings_defer_combined_styles0' : {'action' : 'change', 'target' : 'wpspeed_settings_defer_combined_styles0'},
+    					'wpspeed_settings_css_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_css_minify1'},
+    					'wpspeed_settings_js_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_js_minify1'},
+    					'wpspeed_settings_bottom_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_bottom_js0'},
+    					'wpspeed_settings_lazyload_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_lazyload_enable1'},
+    					'wpspeed_settings_lightimgs_status0' : {'action' : 'change', 'target' : 'wpspeed_settings_lightimgs_status0'},
+						'wpspeed_settings_img_attributes_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_img_attributes_enable0'},
+    					'wpspeed_settings_convert_all_images_to_webp0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_webp0'},
+    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
+    					'wpspeed_settings_adaptive_contents_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_enable0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_js0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js0'},
+    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
+						'wpspeed_settings_adaptive_contents_add_size_attributes0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_add_size_attributes0'},
+    					'wpspeed_settings_cache_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_cache_enable0'},
+    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
+    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
     				},
     				4 : {
-    					'wpspeed_settings_html_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_html_minify1'},
+    					'wpspeed_settings_html_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_html_minify1'},
     					'wpspeed_settings_html_minify_level' : '1',
-    					'wpspeed_settings_combine_files_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_combine_files_enable1'},
-    					'wpspeed_settings_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_css1'},
-    					'wpspeed_settings_javascript1' : {'action' : 'click', 'target' : 'wpspeed_settings_javascript1'},
-    					'wpspeed_settings_font_display_swap1' : {'action' : 'click', 'target' : 'wpspeed_settings_font_display_swap1'},
-    					'wpspeed_settings_defer_combined_styles1' : {'action' : 'click', 'target' : 'wpspeed_settings_defer_combined_styles1'},
-    					'wpspeed_settings_css_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_css_minify1'},
-    					'wpspeed_settings_js_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_js_minify1'},
-    					'wpspeed_settings_bottom_js1' : {'action' : 'click', 'target' : 'wpspeed_settings_bottom_js1'},
-    					'wpspeed_settings_lazyload_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_lazyload_enable1'},
-    					'wpspeed_settings_lightimgs_status1' : {'action' : 'click', 'target' : 'wpspeed_settings_lightimgs_status1'},
-    					'wpspeed_settings_convert_all_images_to_webp1' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_webp1'},
-    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
-    					'wpspeed_settings_adaptive_contents_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_enable1'},
-    					'wpspeed_settings_adaptive_contents_remove_all_js1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js1'},
-    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
-    					'wpspeed_settings_cache_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_cache_enable0'},
-    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'click', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
-    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
+    					'wpspeed_settings_combine_files_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_combine_files_enable1'},
+    					'wpspeed_settings_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_css1'},
+    					'wpspeed_settings_javascript1' : {'action' : 'change', 'target' : 'wpspeed_settings_javascript1'},
+    					'wpspeed_settings_font_display_swap1' : {'action' : 'change', 'target' : 'wpspeed_settings_font_display_swap1'},
+    					'wpspeed_settings_defer_combined_styles1' : {'action' : 'change', 'target' : 'wpspeed_settings_defer_combined_styles1'},
+    					'wpspeed_settings_css_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_css_minify1'},
+    					'wpspeed_settings_js_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_js_minify1'},
+    					'wpspeed_settings_bottom_js1' : {'action' : 'change', 'target' : 'wpspeed_settings_bottom_js1'},
+    					'wpspeed_settings_lazyload_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_lazyload_enable1'},
+    					'wpspeed_settings_lightimgs_status1' : {'action' : 'change', 'target' : 'wpspeed_settings_lightimgs_status1'},
+						'wpspeed_settings_img_attributes_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_img_attributes_enable0'},
+    					'wpspeed_settings_convert_all_images_to_webp1' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_webp1'},
+    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
+    					'wpspeed_settings_adaptive_contents_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_enable1'},
+    					'wpspeed_settings_adaptive_contents_remove_all_js1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js1'},
+    					'wpspeed_settings_adaptive_contents_remove_all_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css0'},
+						'wpspeed_settings_adaptive_contents_add_size_attributes0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_add_size_attributes0'},
+    					'wpspeed_settings_cache_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_cache_enable0'},
+    					'wpspeed_settings_optimizeCssDelivery_enable0' : {'action' : 'change', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable0'},
+    					'wpspeed_settings_adaptive_contents_extract_css0' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_extract_css0'}
     				},
     				5 : {
-    					'wpspeed_settings_html_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_html_minify1'},
+    					'wpspeed_settings_html_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_html_minify1'},
     					'wpspeed_settings_html_minify_level' : '2',
-    					'wpspeed_settings_combine_files_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_combine_files_enable1'},
-    					'wpspeed_settings_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_css1'},
-    					'wpspeed_settings_javascript1' : {'action' : 'click', 'target' : 'wpspeed_settings_javascript1'},
-    					'wpspeed_settings_font_display_swap1' : {'action' : 'click', 'target' : 'wpspeed_settings_font_display_swap1'},
-    					'wpspeed_settings_defer_combined_styles1' : {'action' : 'click', 'target' : 'wpspeed_settings_defer_combined_styles1'},
-    					'wpspeed_settings_css_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_css_minify1'},
-    					'wpspeed_settings_js_minify1' : {'action' : 'click', 'target' : 'wpspeed_settings_js_minify1'},
-    					'wpspeed_settings_bottom_js1' : {'action' : 'click', 'target' : 'wpspeed_settings_bottom_js1'},
-    					'wpspeed_settings_lazyload_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_lazyload_enable1'},
-    					'wpspeed_settings_lightimgs_status1' : {'action' : 'click', 'target' : 'wpspeed_settings_lightimgs_status1'},
-    					'wpspeed_settings_convert_all_images_to_webp1' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_webp1'},
-    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'click', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
-    					'wpspeed_settings_adaptive_contents_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_enable1'},
-    					'wpspeed_settings_adaptive_contents_remove_all_js1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js1'},
-    					'wpspeed_settings_adaptive_contents_remove_all_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css1'},
-    					'wpspeed_settings_cache_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_cache_enable1'},
-    					'wpspeed_settings_optimizeCssDelivery_enable1' : {'action' : 'click', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable1'},
-    					'wpspeed_settings_adaptive_contents_extract_css1' : {'action' : 'click', 'target' : 'wpspeed_settings_adaptive_contents_extract_css1'}
+    					'wpspeed_settings_combine_files_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_combine_files_enable1'},
+    					'wpspeed_settings_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_css1'},
+    					'wpspeed_settings_javascript1' : {'action' : 'change', 'target' : 'wpspeed_settings_javascript1'},
+    					'wpspeed_settings_font_display_swap1' : {'action' : 'change', 'target' : 'wpspeed_settings_font_display_swap1'},
+    					'wpspeed_settings_defer_combined_styles1' : {'action' : 'change', 'target' : 'wpspeed_settings_defer_combined_styles1'},
+    					'wpspeed_settings_css_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_css_minify1'},
+    					'wpspeed_settings_js_minify1' : {'action' : 'change', 'target' : 'wpspeed_settings_js_minify1'},
+    					'wpspeed_settings_bottom_js1' : {'action' : 'change', 'target' : 'wpspeed_settings_bottom_js1'},
+    					'wpspeed_settings_lazyload_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_lazyload_enable1'},
+    					'wpspeed_settings_lightimgs_status1' : {'action' : 'change', 'target' : 'wpspeed_settings_lightimgs_status1'},
+						'wpspeed_settings_img_attributes_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_img_attributes_enable1'},
+    					'wpspeed_settings_convert_all_images_to_webp1' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_webp1'},
+    					'wpspeed_settings_convert_all_images_to_avif0' : {'action' : 'change', 'target' : 'wpspeed_settings_convert_all_images_to_avif0'},
+    					'wpspeed_settings_adaptive_contents_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_enable1'},
+    					'wpspeed_settings_adaptive_contents_remove_all_js1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_js1'},
+    					'wpspeed_settings_adaptive_contents_remove_all_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_remove_all_css1'},
+						'wpspeed_settings_adaptive_contents_add_size_attributes1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_add_size_attributes1'},
+    					'wpspeed_settings_cache_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_cache_enable1'},
+    					'wpspeed_settings_optimizeCssDelivery_enable1' : {'action' : 'change', 'target' : 'wpspeed_settings_optimizeCssDelivery_enable1'},
+    					'wpspeed_settings_adaptive_contents_extract_css1' : {'action' : 'change', 'target' : 'wpspeed_settings_adaptive_contents_extract_css1'}
     				}
     		};
     		var optimizationIconsMapping = {
@@ -152,6 +162,8 @@
     				'wpspeed_settings_lazyload_enable1' : 'fas fa-images',
     				'wpspeed_settings_lightimgs_status0' : 'fas fa-image',
     				'wpspeed_settings_lightimgs_status1' : 'fas fa-image',
+					'wpspeed_settings_img_attributes_enable0' : 'fas fa-compress',
+					'wpspeed_settings_img_attributes_enable1' : 'fas fa-compress',
     				'wpspeed_settings_convert_all_images_to_webp0' : 'fas fa-images',
     				'wpspeed_settings_convert_all_images_to_webp1' : 'fas fa-images',
     				'wpspeed_settings_convert_all_images_to_avif0' : 'fas fa-images',
@@ -163,7 +175,13 @@
     				'wpspeed_settings_adaptive_contents_remove_all_css0' : 'fas fa-random',
     				'wpspeed_settings_adaptive_contents_remove_all_css1' : 'fas fa-random',
     				'wpspeed_settings_cache_enable0' : 'fas fa-database',
-    				'wpspeed_settings_cache_enable1' : 'fas fa-database'
+					'wpspeed_settings_cache_enable1' : 'fas fa-database',
+					'wpspeed_settings_adaptive_contents_add_size_attributes0' : 'fas fa-compress',
+					'wpspeed_settings_adaptive_contents_add_size_attributes1' : 'fas fa-compress',
+					'wpspeed_settings_optimizeCssDelivery_enable0' : 'fas fa-object-group',
+					'wpspeed_settings_optimizeCssDelivery_enable1' : 'fas fa-object-group',
+					'wpspeed_settings_adaptive_contents_extract_css0' : 'fas fa-object-group',
+					'wpspeed_settings_adaptive_contents_extract_css1' : 'fas fa-object-group'
     		};
     		var optimizationLevel = parseInt($('#wpspeed_settings_rangeSlider').val());
     		$('#wpspeed_settings_rangeSlider').on('change', function(jqEvent, doNotRefreshSettings){
@@ -180,7 +198,10 @@
     				} else {
     					var textOptimizationContext = $('label[for=' + controlValue.target + ']').parents('tr');
     					if(!doNotRefreshSettings) {
-    						$('label[for=' + controlValue.target + ']').trigger(controlValue.action);
+							var $input = $('#' + controlValue.target);
+							if ($input.length) {
+							    $input.prop('checked', true).trigger(controlValue.action);
+							}
     					}
     				}
     				
@@ -218,6 +239,15 @@
     		} else {
     			$('span.innerlabel[data-label=0]').addClass('badge bg-primary');
     		}
+
+			// Auto configuration slider management
+			const slider = document.getElementById("wpspeed_settings_rangeSlider");
+			function updateProgress() {
+			  const val = slider.value * 20;
+			  document.documentElement.style.setProperty("--range-progress", val + "%");
+			}
+			updateProgress();
+			slider.addEventListener("input", updateProgress);
     	};
 
 		/**

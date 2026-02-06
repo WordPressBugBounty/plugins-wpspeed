@@ -50,7 +50,7 @@ abstract class Application
 	 *
 	 * @return  void
 	 */
-	public function __construct(Container $container = null)
+	public function __construct(?Container $container = null)
 	{
 		// Start keeping time
 		$this->startTime = microtime(true);
@@ -151,7 +151,7 @@ abstract class Application
 	 *
 	 * @throws  Exception\App
 	 */
-	public static function getInstance($name = null, Container $container = null)
+	public static function getInstance($name = null, ?Container $container = null)
 	{
 		if (empty($name) && !empty(self::$instances))
 		{

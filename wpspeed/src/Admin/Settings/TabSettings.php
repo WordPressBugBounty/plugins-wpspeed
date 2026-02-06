@@ -30,6 +30,16 @@ class TabSettings {
 	public static function generalTab() {
 		return [ 
 				/**
+				 * Miscellaneous
+				 */
+				'generalSection' => [
+						'registration_email' => [
+								'',
+								'',
+								true
+						]
+				],
+				/**
 				 * Combine CSS JS
 				 */
 				'combineCssJsSection' => [ 
@@ -154,27 +164,31 @@ class TabSettings {
 				/**
 				 * Page Cache
 				 */
-				'pageCacheSection' => [ 
-						'cache_enable' => [ 
-								__ ( 'Enable page caching', 'wpspeed' ),
-								__ ( 'When page caching is enabled, pages are served up as static HTML versions of a page in order to avoid potentially time-consuming execution of your server and database. NOTE: this feature is enabled only for logged out users.', 'wpspeed' )
+				'pageCacheSection' => [
+						'cache_enable' => [
+								__ ( 'Enable PHP page caching', 'wpspeed' ),
+								__ ( 'When the PHP page caching is enabled, pages are served up as static HTML versions of a page in order to avoid potentially time-consuming execution of your server and database. NOTE: this feature is enabled only for logged out users.', 'wpspeed' )
 						],
-						'pro_cache_platform' => [ 
-								__ ( 'Platform specific cache', 'wpspeed' ),
-								__ ( 'Page caching can be different for mobile and desktop devices. Enable this option if you need to serve different contents through 2 separate cache.', 'wpspeed' )
-						],
-						'page_cache_lifetime' => [ 
+						'page_cache_lifetime' => [
 								__ ( 'Page cache lifetime', 'wpspeed' ),
-								__ ( 'The lifetime of the page cache. This value must be lower than the cache lifetime of combined files under the optimization settings.', 'wpspeed' )
+								__ ( 'The lifetime of the page cache. This value must be lower than the cache lifetime of combined files under the optimization settings. This option may not apply to the .htaccess page caching if all pages of the website are cache and the PHP execution is completely skipped.', 'wpspeed' )
 						],
-						'cache_exclude' => [ 
+						'pro_cache_platform' => [
+								__ ( 'Platform specific cache', 'wpspeed' ),
+								__ ( 'Page caching can be different for mobile and desktop devices. Enable this option if you need to serve different contents through 2 separate cache. This option does not apply to .htaccess page caching.', 'wpspeed' )
+						],
+						'cache_exclude' => [
 								__ ( 'Exclude page cache by URL', 'wpspeed' ),
 								__ ( 'Enter a substring of each url that you want to exclude from the page cache. It\'s not needed to enter the complete url for the matching, but only a part of it. Add a string and hit \'Enter\'.', 'wpspeed' )
+						],
+						'delete_all_cache' => [
+								__ ( 'Delete all cache folders', 'wpspeed' ),
+								__ ( 'If enabled, WPSpeed will delete every cache folder inside wp-content/cache/, including those created by other plugins. This may solve conflicts but can also cause issues with third-party caches. Disable to limit deletions only to the WPSpeed cache.', 'wpspeed' )
 						]
 				],
 				'instantPageSection' => [
 						'enable_instant_page' => [
-								__ ( 'Enable Instant Page <br/>preloading', 'wpspeed' ),
+								__ ( 'Enable Instant Page preloading', 'wpspeed' ),
 								__ ( 'Instant Page uses just-in-time preloading. This feature, compatible with both desktop and mobile devices, preloads a page right before a user clicks on it. Pages are preloaded only when there\'s a good chance that a user will visit them, and only the HTML is preloaded, being respectful of your users and servers bandwidth and CPU. Preloading happens just a few milliseconds before than a user opens a page thanks to the special \'Prefetch\' metatag, as a result Instant Page makes you pages feel instant to the human brain even on 3G.', 'wpspeed' )
 						],
 						'instant_page_delay' => [
@@ -213,7 +227,7 @@ class TabSettings {
 								__ ( 'If enabled, also iframes will be lazy-loaded.', 'wpspeed' )
 						],
 						'pro_lazyload_bgimages' => [
-								__ ( 'Include CSS background <br/> images', 'wpspeed' ),
+								__ ( 'Include CSS background  images', 'wpspeed' ),
 								__ ( 'If enabled, also CSS background images will be lazy-loaded in the same way of normal images.', 'wpspeed' )
 						],
 						'pro_lazyload_audiovideo' => [
@@ -235,6 +249,10 @@ class TabSettings {
 						'pro_excludeLazyLoadClass' => [
 								__ ( 'Exclude images by CSS class', 'wpspeed' ),
 								__ ( 'Choose classes of the images that you want to exclude from being lazy-loaded. A class must be declared in the tag of an <span class="notranslate">\'&lt;img&gt;\'</span> element. It\'s possible to select a class name or attribute from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
+						],
+						'pro_excludeLazyLoadApplyFetchPriority' => [
+								__( 'Apply fetchpriority to excluded images', 'wpspeed' ),
+								__( 'When enabled, images excluded from lazy loading will be loaded eagerly and marked with <span class="notranslate">fetchpriority="high"</span>. This helps prioritize above-the-fold or LCP images for faster rendering.', 'wpspeed' )
 						]
 				],
 				/**
@@ -414,7 +432,7 @@ class TabSettings {
 							__ ( 'Choose the minimum width that images must have to be optimized. You should ignore small images that are already lightweight and don\'t need any kind of optimization.', 'wpspeed' )
 					],
 					'img_quality' => [
-							__ ( 'Quality for compressed <br/>images', 'wpspeed' ),
+							__ ( 'Quality for compressed images', 'wpspeed' ),
 							__ ( 'You can choose the image quality for resultimg optimized images. High value will mean a higher quality but also higher bandwidth usage.', 'wpspeed' )
 					],
 					'img_resizing_switcher' => [
@@ -442,7 +460,7 @@ class TabSettings {
 							__ ( 'If enabled, all optimized images will not be converted to the next generation WebP/AVIF format for Safari browser on iOS devices. Safari supports WebP images since version 16.0 and AVIF images since version 16.4. Keep this option enabled for maximum compatibility with older versions of the Safari browser.', 'wpspeed' )
 					],
 					'optimize_css_background_images' => [
-							__ ( 'Optimize CSS background <br/>images', 'wpspeed' ),
+							__ ( 'Optimize CSS background images', 'wpspeed' ),
 							__ ( 'If enabled, all images that are loaded through CSS files will also be optimized. The compiled CSS files will include new links to optimized images. This features requires CSS optimization to be enabled.', 'wpspeed' )
 					],
 					'optimize_html_background_images' => [
@@ -460,6 +478,10 @@ class TabSettings {
 					'hash_images_algo' => [
 							__ ( 'Hash method of images name', 'wpspeed' ),
 							__ ( 'Choose the preferred method for the hash generation of the image name. The \'full\' method totally replaces the name of an image with a full hash. The \'partial\' method concatenates a hash to the original name of an image. The \'none\' method leaves the original name of an image unaltered, but pay attention that not using a hash could cause names collision if you have different images with the same name.', 'wpspeed' )
+					],
+					'preserve_cached_images' => [
+							__ ( 'Preserve cached images' ),
+							__ ( 'If enabled, images stored in the cache will not be deleted when clearing or regenerating the cache and will persist indefinitely. The first time a page is visited, optimized images must be created and this may slightly increase the loading time. By preserving cached images forever, once they are generated the following visits will be much faster since the optimized images are already available' )
 					],
 					'img_exts_excluded' => [
 							__ ( 'Exclude image extensions', 'wpspeed' ),
@@ -481,8 +503,17 @@ class TabSettings {
 							__ ( 'Process \'data-src\' attribute', 'wpspeed' ),
 							__ ( 'If enabled, when the special \'data-src\' attribute of an image is present, it will be set to point to the optimized image. This can be useful for example for galleries that use this special attribute in order to load the optimized image instead that the original one".', 'wpspeed' )
 					],
+					'img_processing_datacustom' => [
+							__ ( 'Process custom "data-" attributes', 'wpspeed' ),
+							__ ( 'If enabled, custom "data-" attributes containing image URLs will be processed to point to optimized images. This is useful for elements that store image sources in custom attributes instead of the standard "src" or "data-src"', 'wpspeed' )
+					],
 					'img_attributes_enable' => [
-							__ ( 'Add size attributes', 'wpspeed' )
+							__ ( 'Add size attributes', 'wpspeed' ),
+							__ ( 'You can choose to add width and height attributes to images for better optimization.', 'wpspeed')
+					],
+					'use_simplehtmldom' => [
+							__ ( 'Alternative HTML parsing mode', 'wpspeed' ),
+							__ ( 'Enable this option only if you notice layout issues, wrong UTF-8 characters encoding or conflicts with the default processing. It provides an alternative way to analyze and optimize your page output, which may improve compatibility with certain templates or extensions', 'wpspeed' )
 					],
 					'img_processing_entity_decode' => [
 							__ ( 'Decode HTML entities', 'wpspeed' ),
@@ -499,6 +530,10 @@ class TabSettings {
 					'purify_string_replacement' => [
 							__ ( 'Replacement string', 'wpspeed' ),
 							__ ( 'You can specify an alternative string used to replace the purified string. By default it will be completely removed and replaced with an empty string.', 'wpspeed' )
+					],
+					'img_processing_simplehtmldom_entity_decode' => [
+							__ ( 'Decode text entities', 'wpspeed' ),
+							__ ( 'Convert encoded characters into normal characters in the visible text of your pages. Attributes such as links will remain safe. Enable only if you prefer cleaner source code or need it for validation', 'wpspeed' )
 					]
 			],
 			'addImageSrcsetSection' => [
@@ -525,6 +560,10 @@ class TabSettings {
 					'img_processing_srcset_original_image' => [
 							__ ( 'Standard image \'src\'', 'wpspeed' ),
 							__ ( 'You can choose which image to use for the standard \'src\' attribute used as a fallback for browsers that don\'t support srcset. Choosing a lower resolution image for the \'src\' attribute could be helpful to reach a higher score during the PageSpeed test.', 'wpspeed' )
+					],
+					'img_processing_srcset_datasrc' => [
+							__ ( 'Create \'srcset\' for \'data-src\' images', 'wpspeed' ),
+							__ ( 'If enabled, JSpeed will generate a \'srcset\' attribute for images using \'data-src\' or custom \'data-\' attributes, ensuring optimized responsive images for different screen sizes and improving loading performance.', 'wpspeed' )
 					]
 			]
 		];
@@ -659,7 +698,7 @@ class TabSettings {
 								__ ( 'All CSS files that belong to the chosen extensions will be excluded from the combine functionality. It\'s possible to select an extension name from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
 						],
 						'excludeStyles' => [ 
-								__ ( 'Exclude inline "style" <br/>declarations', 'wpspeed' ),
+								__ ( 'Exclude inline "style" declarations', 'wpspeed' ),
 								__ ( 'Select an inline \'style\' declaration that you want to exclude from the combine functionality, you can type in a substring of the style tag or content that you want to exclude.', 'wpspeed' )
 						],
 						'excludeAllStyles' => [ 
@@ -676,11 +715,11 @@ class TabSettings {
 								__ ( 'Select the Javascript files that you want to exclude from the combine functionality preserving the execution order as they appear on the page. It\'s possible to select a file name from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
 						],
 						'excludeJsComponents_peo' => [ 
-								__ ( 'Exclude Javascript files <br/>by plugin', 'wpspeed' ),
+								__ ( 'Exclude Javascript files by plugin', 'wpspeed' ),
 								__ ( 'All Javascript files that belong to the chosen plugin will be excluded from the combine functionality preserving the execution order as they appear on the page. It\'s possible to select a plugin name from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
 						],
 						'excludeScripts_peo' => [ 
-								__ ( 'Exclude inline "script" <br/>declarations', 'wpspeed' ),
+								__ ( 'Exclude inline "script" declarations', 'wpspeed' ),
 								__ ( 'Select an inline \'script\' declarations that you want to exclude from the combine functionality, you can type in a substring of the script tag or content that you want to exclude.', 'wpspeed' )
 						],
 						'excludeAllScripts' => [ 
@@ -697,11 +736,11 @@ class TabSettings {
 								__ ( 'Select the Javascript files that you want to exclude from the combine functionality without preserving the execution order as they appear on the page. It\'s possible to select a file name from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
 						],
 						'excludeJsComponents' => [ 
-								__ ( 'Exclude Javascript files <br/>by plugin', 'wpspeed' ),
+								__ ( 'Exclude Javascript files by plugin', 'wpspeed' ),
 								__ ( 'All Javascript files that belong to the chosen plugin will be excluded from the combine functionality without preserving the execution order as they appear on the page. It\'s possible to select a plugin name from the list of options or specify additional ones and hit \'Enter\'.', 'wpspeed' )
 						],
 						'excludeScripts' => [ 
-								__ ( 'Exclude inline "script" <br/>declarations', 'wpspeed' ),
+								__ ( 'Exclude inline "script" declarations', 'wpspeed' ),
 								__ ( 'Select an inline \'script\' declarations that you want to exclude from the combine functionality, you can type in a substring of the script tag or content that you want to exclude.', 'wpspeed' )
 						]
 				],
@@ -784,6 +823,10 @@ class TabSettings {
 							__ ( 'Essential CSS code', 'wpspeed' ),
 							__ ( 'It\'s possible to add a piece of essential CSS code that should be present in the lightweight version of a page generated with Adaptive Contents for bots and page speed tools. This is valuable, for example, if you choose to remove all CSS but still need some styles to preserve a basic layout or if you experience warnings in Google Search Console about \'Mobile Usability Issue - Content Wider Than Screen & Clickable Element Too Close\'.', 'wpspeed' )
 					],
+					'adaptive_contents_essential_js_code' => [
+							__ ( 'Essential JS code', 'wpspeed' ),
+							__ ( 'It\'s possible to add a piece of essential JavaScript code that should be present in the lightweight version of a page generated with Adaptive Contents for bots and page speed tools. This can be useful, for example, if you remove all JavaScript but still need minimal functionality, such as basic interactivity, lazy loading images, or avoiding errors due to missing scripts. The code must be added without the &lt;script&gt; tag and will always be added inline', 'wpspeed' )
+					],
 					'adaptive_contents_add_size_attributes' => [
 							__ ( 'Add size attributes only for bots', 'wpspeed' ),
 							__ ( 'If you have enabled the option \'Add size attributes\' under the \'Images optimization\' tab, it\'s possible to choose to add the size attributes for images only for bots using the \'Adaptive Contents\' feature. This is useful if you experience issues with the size of images being stretched on the website.', 'wpspeed' )
@@ -795,6 +838,10 @@ class TabSettings {
 					'adaptive_contents_extract_css' => [
 							__ ( 'Extract \'Above-the-fold\' CSS only for bots', 'wpspeed' ),
 							__ ( 'If you have enabled the \'Extract Above-the-fold CSS\' feature, it\'s possible to choose to run this only for bots using the \'Adaptive Contents\' feature. This is useful if you experience issues or page conflicts with CSS on the website.', 'wpspeed' )
+					],
+					'adaptive_contents_essential_js_code_lazyload_imgs' => [
+							__ ( 'Manage lazy-loaded images', 'wpspeed' ),
+							__ ( 'If you have images lazy-loaded by third-party extensions, this option ensures that they are always loaded for bots as well.', 'wpspeed' )
 					]
 				]
 			];

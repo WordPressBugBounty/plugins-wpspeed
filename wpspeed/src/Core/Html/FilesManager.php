@@ -282,7 +282,7 @@ class FilesManager
 	private function excludeCssPEO()
 	{
 		//if previous file was excluded increment css index
-		if ( ! empty( $this->aCss[ $this->iIndex_css ] ) && ! $this->oParams->get( 'optimizeCssDelivery_enable', '0' ) )
+		if ( ! empty( $this->aCss[ $this->iIndex_css ] ) && ! $this->oParams->get( 'optimizeCssDelivery_enable', '1' ) )
 		{
 			$this->iIndex_css++;
 		}
@@ -318,7 +318,7 @@ class FilesManager
 	private function prepareCssPEO()
 	{
 		//return marker for combined file
-		if ( empty ( $this->aCss[ $this->iIndex_css ] ) && ! $this->oParams->get( 'optimizeCssDelivery_enable', '0' ) )
+		if ( empty ( $this->aCss[ $this->iIndex_css ] ) && ! $this->oParams->get( 'optimizeCssDelivery_enable', '1' ) )
 		{
 			$this->sReplacement = '<WPSPEED_CSS' . $this->iIndex_css . '>';
 		}
@@ -348,7 +348,7 @@ class FilesManager
 			$id .= $aMatches['content'];
 		}
 		
-		if($this->oParams->get('adaptive_contents_enable', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+		if($this->oParams->get('adaptive_contents_enable', 1) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 			$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 			$botRegexPattern = array();
 			$botsList = $this->oParams->get ( 'adaptive_contents_bots_list', array (

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- sfondo blu -->
+  <rect x="2" y="2" width="12" height="12" rx="2" fill="#72aee6"></rect>
+
+  <!-- immagine (montagna + sole) -->
+  <path d="M5 11 L7 8 L9 10 L10 9 L12 11 Z" fill="white"></path> 
+
+  <polyline points="5,4.5 7,6.5 11,3.5" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.7) translate(6,4)"></polyline>
+</svg>

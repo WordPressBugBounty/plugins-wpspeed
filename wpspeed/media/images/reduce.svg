@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- DOM tree -->
+  <g transform="translate(8,20)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- connessioni -->
+    <path d="M20 10 V16 M20 16 H8 M20 16 H32 M8 26 V22 M32 26 V22 M32 26 H40 M32 26 H24" stroke="#2F4971" stroke-width="1.6"></path>
+
+    <!-- nodi -->
+    <!-- root -->
+    <rect x="14" y="4" width="12" height="8" rx="1.5" fill="#FFFFFF" opacity="0.10" stroke="#2F4971" stroke-width="1.6"></rect>
+    <!-- level 1: left & right -->
+    <rect x="2" y="22" width="12" height="8" rx="1.5" fill="#FFFFFF" opacity="0.10" stroke="#2F4971" stroke-width="1.6"></rect>
+    <rect x="26" y="22" width="12" height="8" rx="1.5" fill="#FFFFFF" opacity="0.10" stroke="#2F4971" stroke-width="1.6"></rect>
+
+    <!-- level 2 under right: two children -->
+    <rect x="18" y="30" width="12" height="8" rx="1.5" fill="#FFFFFF" opacity="0.10" stroke="#2F4971" stroke-width="1.6"></rect>
+    <rect x="38" y="30" width="12" height="8" rx="1.5" fill="#FFFFFF" opacity="0.10" stroke="#2F4971" stroke-width="1.6"></rect>
+
+    <!-- badge riduzione su un ramo (minus) -->
+    <g transform="translate(44,18)">
+      <circle cx="0" cy="0" r="5.5" fill="#5CB1FF"></circle>
+      <path d="M-3 0 H3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+    </g>
+  </g>
+</svg>

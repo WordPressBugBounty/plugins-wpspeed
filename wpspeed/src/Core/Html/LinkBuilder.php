@@ -281,9 +281,9 @@ class LinkBuilder
 
 		// ADAPTIVE CONTENTS: remove any matched tag for bots
 		// Check for user agent exclusion
-		if($this->params->get('adaptive_contents_enable', 0) &&
-		(($this->params->get('adaptive_contents_remove_all_css', 0) && $sType == 'css') ||
-		($this->params->get('adaptive_contents_remove_all_js', 0) && $sType == 'js'))) {
+		if($this->params->get('adaptive_contents_enable', 1) &&
+		(($this->params->get('adaptive_contents_remove_all_css', 1) && $sType == 'css') ||
+		($this->params->get('adaptive_contents_remove_all_js', 1) && $sType == 'js'))) {
 			if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 				$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 				$botRegexPattern = array();
@@ -477,7 +477,7 @@ class LinkBuilder
 	protected function getNewCssLink( $sUrl )
 	{
 		//language=HTML
-		if(Plugin::getPluginParams()->get('defer_combined_styles', 0)) {
+		if(Plugin::getPluginParams()->get('defer_combined_styles', 1)) {
 			return '<style>html{visibility:hidden}</style><link rel="preload" as="style" onload="setTimeout(function(){document.querySelector(\'html\').style.visibility=\'visible\';}, 1);this.onload=null;this.rel=\'stylesheet\'" href="' . $sUrl . '"/>';
 		} else {
 			return '<link rel="stylesheet" href="' . $sUrl . '" />';

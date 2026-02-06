@@ -24,14 +24,28 @@ $hiddenContainsGF   = $oParams->get( 'hidden_containsgf', '' );
 		<div class="icons-container">
 			{{Icons::printIconsHTML(Icons::compileUtilityIcons(Icons::getUtilityArray(['browsercaching', 'restorehtaccess', 'orderplugins', 'keycache'])))}}
 			{{Icons::printIconsHTML(Icons::compileUtilityIcons(Icons::getUtilityArray(['cleancache'])))}}
-			<span class="badge bg-dark"><span class="fas fa-chart-area"></span> {{sprintf( __('Cache files: %s', 'wpspeed'), $this->no_files )}}</span>
-			<span class="badge bg-dark"><span class="fas fa-chart-bar"></span> {{sprintf( __('Cache size: %s', 'wpspeed'), $this->size )}}</span>
+
+			<div class="wpspeed-stats">
+			  <div class="stat-card">
+			    <div class="circle" data-value="{{$this->no_files}}">
+			      <span class="circle-inner" id="cacheFilesValue">{{$this->no_files}}</span>
+			    </div>
+			    <h4>{{__('Cache files', 'wpspeed')}}</h4>
+			  </div>
+			  <div class="stat-card">
+			    <div class="circle" data-value="{{$this->size}}">
+			      <span class="circle-inner" id="cacheSizeValue">{{$this->size}}</span>
+			    </div>
+			    <h4>{{__('Cache size', 'wpspeed')}}</h4>
+			  </div>
+			</div>
+
 		</div>
 	</div>
 	
     <div class="clearfix-both grid mt-n3">
-        <div class="g-col-12">
-            <ul class="nav flex-wrap flex-md-row nav-pills">
+        <div class="g-col-12 g-col-lg-2">
+            <ul class="nav flex-wrap flex-md-column nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#autoconfiguration-tab" data-bs-toggle="tab">
                         <div>
@@ -125,7 +139,7 @@ $hiddenContainsGF   = $oParams->get( 'hidden_containsgf', '' );
                 </li>
             </ul>
         </div>
-        <div class="g-col-12">
+        <div class="g-col-12 g-col-lg-10">
             {{\WPSpeed\Admin\Settings\TabContent::start()}}
 
             {{settings_fields('wpspeedOptionsPage')}}

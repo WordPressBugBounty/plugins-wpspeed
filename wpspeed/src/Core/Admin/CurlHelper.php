@@ -50,7 +50,9 @@ class CurlHelper
 		$error    = curl_errno( $curl );
 		$message  = curl_error( $curl );
 
-		curl_close( $curl );
+		if (is_resource($curl)) {
+			curl_close ($curl);
+		}
 
 		if ( $error > 0 )
 		{

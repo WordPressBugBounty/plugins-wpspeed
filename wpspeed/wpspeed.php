@@ -3,8 +3,8 @@
 /**
  * Plugin Name: WPSpeed
  * Plugin URI: https://storejextensions.org/extensions/wpspeed.html
- * Description: WPSpeed allows your website to reach the maximum score and performance on Google PageSpeed Insights, GTmetrix and Core Web Vitals. <a href="https://storejextensions.org/extensions/wpspeed.html">Upgrade to PRO</a> to unlock all pages of the website, the FREE version is limited to the home page only. You can also get our <a href="https://storejextensions.org/wordpress-speed-performance-service.html">Optimization Service</a> to boost performance of your Wordpress site thanks to our expertise team.
- * Version: 2.6.7
+ * Description: WPSpeed allows your website to reach the maximum score and performance on Google PageSpeed Insights, GTmetrix and Core Web Vitals. <a href="https://storejextensions.org/extensions/wpspeed.html">Upgrade to PRO</a> to unlock all pages of the website, the ⚠️ FREE version is limited to the home page only. You can also get our <a href="https://storejextensions.org/wordpress-speed-performance-service.html">Optimization Service</a> to boost performance of your Wordpress site thanks to our expertise team.
+ * Version: 2.6.9
  * Author: JExtensions Store
  * Author URI: https://storejextensions.org
  * License: GNU/GPLv3
@@ -37,7 +37,7 @@ if (! (PHP_VERSION_ID >= 70200)) {
 
 define ( '_WP_EXEC', '1' );
 define ( '_WPSPEED_EXEC', 1 );
-define ( 'WPSPEED_VERSION', '2.6.5' );
+define ( 'WPSPEED_VERSION', '2.6.9' );
 
 define ( 'WPSPEED_FILE_PATH', __FILE__ );
 define ( 'WPSPEED_URL', plugin_dir_url ( WPSPEED_FILE_PATH ) );

@@ -123,7 +123,7 @@ class Html extends Base
                 
                 // ADAPTIVE CONTENTS: remove any matched tag for bots
                 // Check for user agent exclusion
-                if($this->params->get('adaptive_contents_enable', 0) && $adaptiveContentsCssSelector = trim($this->params->get('adaptive_contents_css_selector', 'script[src],iframe,video'))) {
+                if($this->params->get('adaptive_contents_enable', 1) && $adaptiveContentsCssSelector = trim($this->params->get('adaptive_contents_css_selector', 'script[src],iframe,video'))) {
                 	if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
                 		$user_agent = $_SERVER ['HTTP_USER_AGENT'];
                 		$botRegexPattern = array();
@@ -243,7 +243,7 @@ class Html extends Base
                 
                 // Process even background images embed in the HTML source code
                 $this->params = Plugin::getPluginParams();
-                if($this->params->get('lightimgs_status', 0) && $this->params->get('optimize_html_background_images', 0)) {
+                if($this->params->get('lightimgs_status', 1) && $this->params->get('optimize_html_background_images', 0)) {
                 	$lightImageOptimizer = new LightImages($this->params);
                 	$dom = new \DOMDocument('1.0', 'utf-8');
                 	$processGIF = $this->params->get('img_support_gif', 0);

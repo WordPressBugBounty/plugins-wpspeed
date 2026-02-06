@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- corpo documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+  
+  <!-- immagine con compressione -->
+  <g transform="translate(8,20)">
+    <rect x="0" y="0" width="40" height="28" rx="4" fill="#FFFFFF" opacity="0.06"></rect>
+    <rect x="0.8" y="0.8" width="38.4" height="26.4" rx="3.2" stroke="#2F4971" stroke-opacity="0.25" fill="none"></rect>
+    <path d="M6 24 L16 10 L22 16 L28 12 L36 24 Z" fill="#5CB1FF" opacity="0.9"></path>
+    <circle cx="30" cy="8" r="3.5" fill="#5CB1FF"></circle>
+    <!-- frecce compressione -->
+    <path d="M20 -6 v6 m0 0 l-3 -3 m3 3 l3 -3" stroke="#5CB1FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M20 34 v-6 m0 0 l-3 3 m3 -3 l3 3" stroke="#5CB1FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+</svg>

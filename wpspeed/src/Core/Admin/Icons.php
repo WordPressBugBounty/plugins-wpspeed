@@ -29,15 +29,14 @@ class Icons
 		foreach ( $aButtons as $aButton )
 		{
 			$sContentAttr = Utility::bsTooltipContentAttribute();
-			$sTooltip     = @$aButton['tooltip'] ? " class=\"hasPopover fig-caption\" title=\"{$aButton['name']}\" {$sContentAttr}=\"{$aButton['tooltip']}\" " : ' class="fig-caption"';
 			$sIconSrc     = Paths::iconsUrl() . '/' . $aButton['icon'];
 			$sToggle      = '<i class="toggle fa"></i>';
 
 			$sIconsHTML .= <<<HTML
-<div id="{$aButton['id']}" class="icon {$aButton['class']}">
+<div id="{$aButton['id']}" class="icon hasPopover {$aButton['class']}" title="{$aButton['name']}" {$sContentAttr}="{$aButton['tooltip']}">
 	<a href="{$aButton['link']}" class="btn btn-primary" {$aButton['script']}>
 		<span class="{$aButton['icon']}"></span>
-		<span{$sTooltip}>{$aButton['name']}</span>
+		<span class="fig-caption">{$aButton['name']}</span>
 		{$sToggle}
 	</a>
 </div>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- simbolo CSS styles -->
+  <g transform="translate(8,26)" stroke-linecap="round">
+    <!-- graffa sinistra -->
+    <path d="M4 0 C0 4, 0 12, 4 16 C0 20, 0 28, 4 32" stroke="#2F4971" stroke-width="2.4" fill="none"></path>
+    <!-- graffa destra -->
+    <path d="M36 0 C40 4, 40 12, 36 16 C40 20, 40 28, 36 32" stroke="#2F4971" stroke-width="2.4" fill="none"></path>
+    
+    <!-- linee proprietà CSS -->
+    <line x1="12" y1="8" x2="28" y2="8" stroke="#5CB1FF" stroke-width="2"></line>
+    <line x1="12" y1="16" x2="24" y2="16" stroke="#5CB1FF" stroke-width="2"></line>
+    <line x1="12" y1="24" x2="30" y2="24" stroke="#5CB1FF" stroke-width="2"></line>
+  </g>
+</svg>

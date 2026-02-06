@@ -22,7 +22,7 @@ use WPSpeed\Platform\Plugin;
 
 class Utility extends Controller
 {
-	public function __construct( Container $container = null )
+	public function __construct( ?Container $container = null )
 	{
 		parent::__construct( $container );
 	}

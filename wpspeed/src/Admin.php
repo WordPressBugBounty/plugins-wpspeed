@@ -97,6 +97,25 @@ HTML;
 		{
 			return;
 		}
+		
+		// Remove any other Select2 assets
+		add_filter( 'style_loader_tag', function( $html, $handle, $href, $media ) {
+			$is_select2 = stripos($handle, 'select2') !== false || stripos($href, 'select2') !== false;
+			$is_wpspeed = strpos($handle, 'wpspeed-') === 0;
+			if ( $is_select2 && ! $is_wpspeed ) {
+				return '';
+			}
+			return $html;
+		}, 1000, 4 );
+		add_filter( 'script_loader_tag', function( $html, $handle, $src ) {
+			$is_select2 = stripos($handle, 'select2') !== false || stripos($src, 'select2') !== false;
+			$is_wpspeed = strpos($handle, 'wpspeed-') === 0;
+			
+			if ( $is_select2 && ! $is_wpspeed ) {
+				return '';
+			}
+			return $html;
+		}, 1000, 3 );
 
 		wp_enqueue_style( 'wpspeed-bootstrap-css' );
 		wp_enqueue_style( 'wpspeed-verticaltabs-css' );
@@ -226,11 +245,12 @@ HTML;
 
 		$admin_bar->add_node( $aArgs );
 		
+		$nonce = wp_create_nonce('cleancache');
 		$aArgs = [
 			'id'     => 'wpspeed-clear-cache',
 			'title'  => __( '<span class="ab-icon dashicons-trash"></span>WPSpeed cache', 'wpspeed' ),
 			'href'   => add_query_arg( [
-					'page' => 'wpspeed&task=cleancache',
+					'page' => 'wpspeed&task=cleancache&_wpnonce=' . $nonce,
 			], admin_url( 'options-general.php' ) )
 		];
 		

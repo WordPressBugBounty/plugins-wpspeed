@@ -190,7 +190,7 @@ class Helper {
 					'WPSpeed\Minify\Json',
 					'optimize'
 			);
-			$aOptions ['minifyLevel'] = $oParams->get ( 'html_minify_level', 1 );
+			$aOptions ['minifyLevel'] = $oParams->get ( 'html_minify_level', 2 );
 			$aOptions ['isXhtml'] = self::isXhtml ( $sHtml );
 			$aOptions ['isHtml5'] = self::isHtml5 ( $sHtml );
 

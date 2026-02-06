@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- corpo documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  
+  <!-- barra header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+  
+  <!-- ingranaggio settings nell'header -->
+  <g transform="translate(48,6) scale(0.6)">
+    <circle cx="0" cy="0" r="4" stroke="#19335B" stroke-width="1.6" fill="none"></circle>
+    <path d="M-6 0 h12 M0 -6 v12" stroke="#19335B" stroke-width="1.6" stroke-linecap="round"></path>
+  </g>
+  
+  <!-- contenuto adattivo -->
+  <g transform="translate(8,20)">
+    <!-- blocchi -->
+    <rect x="0" y="0" width="40" height="8" rx="2" fill="#FFFFFF" opacity="0.5"></rect>
+    <rect x="0" y="12" width="32" height="8" rx="2" fill="#FFFFFF" opacity="0.5"></rect>
+    <rect x="0" y="24" width="24" height="8" rx="2" fill="#FFFFFF" opacity="0.5"></rect>
+    
+    <!-- frecce di adattamento -->
+    <path d="M42 4 h6" stroke="#5CB1FF" stroke-width="2.2" stroke-linecap="round"></path>
+    <path d="M42 16 h6" stroke="#5CB1FF" stroke-width="2.2" stroke-linecap="round"></path>
+    <path d="M42 28 h6" stroke="#5CB1FF" stroke-width="2.2" stroke-linecap="round"></path>
+  </g>
+</svg>

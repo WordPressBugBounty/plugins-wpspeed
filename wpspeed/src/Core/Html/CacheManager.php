@@ -110,9 +110,9 @@ class CacheManager
 		}
 		
 		// ADAPTIVE CONTENTS: add essential CSS code for bots if remove all CSS is not active
-		if ($this->params->get('adaptive_contents_enable', 0) &&
+		if ($this->params->get('adaptive_contents_enable', 1) &&
 		   ($adaptiveContentsEssentialCssCode = trim($this->params->get ( 'adaptive_contents_essential_css_code', ''))) &&
-		   !$this->params->get('adaptive_contents_remove_all_css', 0)){
+		   !$this->params->get('adaptive_contents_remove_all_css', 1)){
 				if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 					$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 					$botRegexPattern = array();
@@ -144,7 +144,7 @@ class CacheManager
 					$isBot = preg_match("/{$botRegexPattern}/i", $user_agent) || array_key_exists($_SERVER['REMOTE_ADDR'], Utility::$botsIP);
 					if($isBot) {
 						$mobileFriendlyCss = '';
-						if($this->params->get('adaptive_contents_remove_all_css', 0)) {
+						if($this->params->get('adaptive_contents_remove_all_css', 1)) {
 							$mobileFriendlyCss = $this->essentialCssMobileFriendly;
 						}
 						$this->params->set ( 'add_custom_css_code', 1 );
@@ -185,7 +185,7 @@ class CacheManager
 		if ( ! Helper::isMsieLT10() && $this->oParams->get( 'combine_files_enable', '1' ) && ! $this->oLinkBuilder->oProcessor->bAmpPage )
 		{
 			$bCombineCss = (bool)$this->oParams->get( 'css', 1 );
-			$bCombineJs  = (bool)$this->oParams->get( 'js', 1 );
+			$bCombineJs  = (bool)$this->oParams->get( 'javascript', 1 );
 
 
 			if ( $bCombineCss || $bCombineJs )
@@ -219,7 +219,7 @@ class CacheManager
 
 					//If Optimize CSS Delivery feature not enabled then we'll need to insert the link to
 					//the combined css file in the HTML
-					if ( ! $this->oParams->get( 'optimizeCssDelivery_enable', '0' ) )
+					if ( ! $this->oParams->get( 'optimizeCssDelivery_enable', '1' ) )
 					{
 						//Http2 push
 						$oCssProcessor->preloadHttp2( $aCssCache['contents'], true );
@@ -232,7 +232,7 @@ class CacheManager
 					}
 				}
 
-				$css_delivery_enabled = $this->oParams->get( 'optimizeCssDelivery_enable', '0' );
+				$css_delivery_enabled = $this->oParams->get( 'optimizeCssDelivery_enable', '1' );
 
 				if ( $css_delivery_enabled )
 				{
@@ -241,6 +241,46 @@ class CacheManager
 					try
 					{
 						$sCriticalCss = $this->getCriticalCss( $oCssProcessor, $sPageCss );
+						
+						// Append adaptive contents CSS if bot is detected
+						if ($this->params->get('adaptive_contents_enable', 0) &&
+						   ($adaptiveContentsEssentialCssCode = trim($this->params->get ( 'adaptive_contents_essential_css_code', '')))){
+							if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+								$user_agent = $_SERVER ['HTTP_USER_AGENT'];
+								$botRegexPattern = array();
+								$botsList = $this->params->get ( 'adaptive_contents_bots_list', array (
+										'lighthouse',
+										'googlebot',
+										'googlebot-mobile',
+										'googlebot-video',
+										'gtmetrix',
+										'baiduspider',
+										'duckduckbot',
+										'twitterbot',
+										'applebot',
+										'semrushbot',
+										'ptst',
+										'ahrefs',
+										'pingdom',
+										'seranking',
+										'moto g power',
+										'rsiteauditor'
+								) );
+								if (! empty ( $botsList )) {
+									foreach ( $botsList as &$bot ) {
+										$bot = preg_quote($bot);
+									}
+									$botRegexPattern = implode('|', $botsList);
+								}
+								
+								$isBot = preg_match("/{$botRegexPattern}/i", $user_agent) || array_key_exists($_SERVER['REMOTE_ADDR'], Utility::$botsIP);
+								if($isBot) {
+									$sCriticalCss .= ' ' . $adaptiveContentsEssentialCssCode;
+								}
+							}
+						}
+						
+						
 						//Http2 push
 						$oCssProcessor->preloadHttp2( $sCriticalCss );
 						$this->oLinkBuilder->addCriticalCssToHead( $sCriticalCss );
@@ -265,6 +305,82 @@ class CacheManager
 				$sSection = $this->oParams->get( 'bottom_js', '1' ) == '1' ? 'body' : 'head';
 
 				$this->oLinkBuilder->addExcludedJsToSection( $sSection );
+				
+				// Append adaptive contents JS if bot is detected
+				if ($this->params->get('adaptive_contents_enable', 0) &&
+				   ($adaptiveContentsEssentialJsCode = trim($this->params->get ( 'adaptive_contents_essential_js_code', '')))){
+					if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+						$user_agent = $_SERVER ['HTTP_USER_AGENT'];
+						$botRegexPattern = array();
+						$botsList = $this->params->get ( 'adaptive_contents_bots_list', array (
+								'lighthouse',
+								'googlebot',
+								'googlebot-mobile',
+								'googlebot-video',
+								'gtmetrix',
+								'baiduspider',
+								'duckduckbot',
+								'twitterbot',
+								'applebot',
+								'semrushbot',
+								'ptst',
+								'ahrefs',
+								'pingdom',
+								'seranking',
+								'moto g power',
+								'rsiteauditor'
+						) );
+						if (! empty ( $botsList )) {
+							foreach ( $botsList as &$bot ) {
+								$bot = preg_quote($bot);
+							}
+							$botRegexPattern = implode('|', $botsList);
+						}
+						
+						$isBot = preg_match("/{$botRegexPattern}/i", $user_agent) || array_key_exists($_SERVER['REMOTE_ADDR'], Utility::$botsIP);
+						if($isBot) {
+							$this->oLinkBuilder->addCriticalJsToHead( $adaptiveContentsEssentialJsCode );
+						}
+					}
+				}
+				
+				// Append adaptive contents lazy load JS if bot is detected
+				if ($this->params->get('adaptive_contents_enable', 0) && $this->params->get ( 'adaptive_contents_essential_js_code_lazyload_imgs', 0)){
+					if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+						$user_agent = $_SERVER ['HTTP_USER_AGENT'];
+						$botRegexPattern = array();
+						$botsList = $this->params->get ( 'adaptive_contents_bots_list', array (
+								'lighthouse',
+								'googlebot',
+								'googlebot-mobile',
+								'googlebot-video',
+								'gtmetrix',
+								'baiduspider',
+								'duckduckbot',
+								'twitterbot',
+								'applebot',
+								'semrushbot',
+								'ptst',
+								'ahrefs',
+								'pingdom',
+								'seranking',
+								'moto g power',
+								'rsiteauditor'
+						) );
+						if (! empty ( $botsList )) {
+							foreach ( $botsList as &$bot ) {
+								$bot = preg_quote($bot);
+							}
+							$botRegexPattern = implode('|', $botsList);
+						}
+						
+						$isBot = preg_match("/{$botRegexPattern}/i", $user_agent) || array_key_exists($_SERVER['REMOTE_ADDR'], Utility::$botsIP);
+						if($isBot) {
+							$lazyloadImgsJsCode = 'document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("img[data-src]").forEach(e=>{e.src=e.getAttribute("data-src"),e.removeAttribute("data-src")})});';
+							$this->oLinkBuilder->addCriticalJsToHead( $lazyloadImgsJsCode );
+						}
+					}
+				}
 
 				if ( ! empty ( $aJsLinksArray ) )
 				{
@@ -508,11 +624,11 @@ class CacheManager
 				}
 
 				$u                     = Parser::HTML_ATTRIBUTE_VALUE();
-				$bImgAttributesEnabled = $this->oParams->get( 'img_attributes_enable', '0' );
+				$bImgAttributesEnabled = $this->oParams->get( 'img_attributes_enable', '1' );
 				
 				// Setup default excludes for Adaptive Contents
 				$isBot = false;
-				if($this->oParams->get('adaptive_contents_enable', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+				if($this->oParams->get('adaptive_contents_enable', 1) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 					$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 					$botRegexPattern = array();
 					$botsList = $this->oParams->get ( 'adaptive_contents_bots_list', array (
@@ -542,7 +658,7 @@ class CacheManager
 					
 					$isBot = preg_match("/{$botRegexPattern}/i", $user_agent) || array_key_exists($_SERVER['REMOTE_ADDR'], Utility::$botsIP);
 				}
-				if($this->oParams->get('adaptive_contents_add_size_attributes', 0) && !$isBot) {
+				if($this->oParams->get('adaptive_contents_add_size_attributes', 1) && !$isBot) {
 					$bImgAttributesEnabled = false;
 				}
 				

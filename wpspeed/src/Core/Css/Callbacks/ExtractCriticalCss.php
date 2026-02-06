@@ -19,7 +19,7 @@ defined( '_WPSPEED_EXEC' ) or die( 'Restricted access' );
 use WPSpeed\Core\Css\Parser;
 use WPSpeed\RegexTokenizer\Debug\Debug;
 use Psr\Log\LoggerAwareInterface;
-
+use WPSpeed\Platform\Plugin;
 
 class ExtractCriticalCss extends CallbackBase implements LoggerAwareInterface
 {

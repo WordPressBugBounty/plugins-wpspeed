@@ -99,7 +99,7 @@ class Processor {
 		if ($this->isCombineFilesSet () || $this->oParams->get ( 'pro_http2_push_enable', '0' )) {
 
 			// Exclude by menu item the CSS extraction
-			if($this->oParams->get ( 'optimizeCssDelivery_enable', '0' )) {
+			if($this->oParams->get ( 'optimizeCssDelivery_enable', '1' )) {
 				$currentPageUrl = home_url ( $wp->request );
 				$menuExcluded = $this->oParams->get ( 'extractcss_menu_excluded', array () );
 				foreach ( $menuExcluded as $menuChunk ) {
@@ -111,7 +111,7 @@ class Processor {
 			
 			// Setup default excludes for Adaptive Contents
 			$isBot = false;
-			if($this->oParams->get('adaptive_contents_enable', 0) && $this->oParams->get('adaptive_contents_extract_css', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+			if($this->oParams->get('adaptive_contents_enable', 1) && $this->oParams->get('adaptive_contents_extract_css', 1) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 				$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 				$botRegexPattern = array();
 				$botsList = $this->oParams->get ( 'adaptive_contents_bots_list', array (
@@ -286,7 +286,7 @@ class Processor {
 		}
 	}
 	public function processLazyLoad() {
-		$bLazyLoad = ( bool ) ($this->oParams->get ( 'lazyload_enable', '0' ) && ! $this->bAmpPage);
+		$bLazyLoad = ( bool ) ($this->oParams->get ( 'lazyload_enable', '1' ) && ! $this->bAmpPage);
 
 		if ($bLazyLoad || $this->oParams->get ( 'pro_http2_push_enable', '0' ) || $this->oParams->get ( 'pro_next_gen_images', '1' )) {
 			WPSPEED_DEBUG ? Profiler::start ( 'LazyLoadImages' ) : null;
@@ -396,11 +396,11 @@ class Processor {
 		\WPSpeed\Core\LazyLoadExtended::setupLazyLoadExtended ( $this, $oParser, $bDeferred );
 	}
 	public function processImageAttributes() {
-		$bImgAttributesEnabled = $this->oParams->get ( 'img_attributes_enable', '0' );
+		$bImgAttributesEnabled = $this->oParams->get ( 'img_attributes_enable', '1' );
 
 		// Setup default excludes for Adaptive Contents
 		$isBot = false;
-		if ($this->oParams->get ( 'adaptive_contents_enable', 0 ) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+		if ($this->oParams->get ( 'adaptive_contents_enable', 1 ) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 			$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 			$botRegexPattern = array ();
 			$botsList = $this->oParams->get ( 'adaptive_contents_bots_list', array (
@@ -430,11 +430,11 @@ class Processor {
 
 			$isBot = preg_match ( "/{$botRegexPattern}/i", $user_agent ) || array_key_exists ( $_SERVER ['REMOTE_ADDR'], Utility::$botsIP );
 		}
-		if ($this->oParams->get ( 'adaptive_contents_add_size_attributes', 0 ) && ! $isBot) {
+		if ($this->oParams->get ( 'adaptive_contents_add_size_attributes', 1 ) && ! $isBot) {
 			$bImgAttributesEnabled = false;
 		}
 
-		if ($bImgAttributesEnabled || ($this->oParams->get ( 'lazyload_enable', '0' ) && $this->oParams->get ( 'lazyload_autosize', '0' ))) {
+		if ($bImgAttributesEnabled || ($this->oParams->get ( 'lazyload_enable', '1' ) && $this->oParams->get ( 'lazyload_autosize', '0' ))) {
 			WPSPEED_DEBUG ? Profiler::start ( 'ProcessImageAttributes' ) : null;
 
 			$oParser = new Parser ();

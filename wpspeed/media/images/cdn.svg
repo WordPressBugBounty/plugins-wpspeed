@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- simbolo CDN -->
+  <g transform="translate(12,24)">
+    <!-- globo -->
+    <circle cx="16" cy="16" r="12" stroke="#2F4971" stroke-width="2" fill="none"></circle>
+    <!-- meridiani/paralleli -->
+    <ellipse cx="16" cy="16" rx="12" ry="4" stroke="#2F4971" stroke-width="1.2" fill="none"></ellipse>
+    <ellipse cx="16" cy="16" rx="4" ry="12" stroke="#2F4971" stroke-width="1.2" fill="none"></ellipse>
+
+    <!-- frecce di distribuzione -->
+    <path d="M16 0 L16 -6 M16 -6 L12 -2 M16 -6 L20 -2" stroke="#5CB1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M0 16 L-6 16 M-6 16 L-2 12 M-6 16 L-2 20" stroke="#5CB1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M16 32 L16 38 M16 38 L12 34 M16 38 L20 34" stroke="#5CB1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+</svg>

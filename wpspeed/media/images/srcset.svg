@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- corpo documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- simbolo SRCSET -->
+  <g transform="translate(6,22)">
+    <!-- immagine piccola -->
+    <rect x="0" y="12" width="10" height="8" rx="1.5" fill="#5CB1FF" opacity="0.7"></rect>
+    <path d="M1 18 L4 14 L6 16 L8 14 L9 18 Z" fill="#19335B" opacity="0.4"></path>
+
+    <!-- immagine media -->
+    <rect x="14" y="6" width="14" height="12" rx="2" fill="#5CB1FF" opacity="0.85"></rect>
+    <path d="M16 16 L20 10 L23 13 L26 10 L27 16 Z" fill="#19335B" opacity="0.4"></path>
+
+    <!-- immagine grande -->
+    <rect x="32" y="0" width="18" height="16" rx="2.5" fill="#5CB1FF"></rect>
+    <path d="M34 14 L38 6 L42 10 L45 6 L48 14 Z" fill="#19335B" opacity="0.4"></path>
+
+    <!-- frecce di collegamento -->
+    <path d="M10 16 H14" stroke="#5CB1FF" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M28 10 H32" stroke="#5CB1FF" stroke-width="2" stroke-linecap="round"></path>
+  </g>
+</svg>

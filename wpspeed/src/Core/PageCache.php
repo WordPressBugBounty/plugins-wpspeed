@@ -109,7 +109,7 @@ class PageCache
 		
 		$params = Plugin::getPluginParams();
 
-		if ($params->get('cache_enable', '0') && Utility::isGuest() && !self::isExcluded($params))
+		if ($params->get('cache_enable', '1') && Utility::isGuest() && !self::isExcluded($params))
 		{
 			return true;
 		}

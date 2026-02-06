@@ -162,7 +162,7 @@ class Uri
 	 *
 	 * @return  string  The base URI string
 	 */
-	public static function base($pathonly = false, Container $container = null)
+	public static function base($pathonly = false, ?Container $container = null)
 	{
 		// Get the base request path.
 		if (empty(self::$base))

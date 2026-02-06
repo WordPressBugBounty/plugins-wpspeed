@@ -96,7 +96,7 @@ class Optimize
 		WPSPEED_DEBUG ? Profiler::start( 'Process', true ) : null;
 
 		// Exclude disable always the lazy load of images if the Adaptive Contents is detected
-		if($this->params->get('adaptive_contents_enable', 0)) {
+		if($this->params->get('adaptive_contents_enable', 1)) {
 			if (isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 				$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 				$botRegexPattern = array();

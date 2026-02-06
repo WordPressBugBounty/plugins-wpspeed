@@ -27,7 +27,7 @@ class File implements FilesystemInterface
 	 *
 	 * @return  File
 	 */
-	public function __construct(array $options, Container $container = null)
+	public function __construct(array $options, ?Container $container = null)
 	{
 		// No further operation necessary
 	}

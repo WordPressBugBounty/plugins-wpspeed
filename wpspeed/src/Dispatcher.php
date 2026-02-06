@@ -114,7 +114,7 @@ PHPCODE;
 			] );
 		}
 		
-		if (self::$oParams->get ( 'lazyload_enable', '0' )) { 
+		if (self::$oParams->get ( 'lazyload_enable', '1' )) { 
 			add_action ( 'wp_head', [
 					__CLASS__,
 					'enqueueLazyLoad'
@@ -185,7 +185,7 @@ PHPCODE;
 			return $sHtml;
 		}
 
-		$disable_logged_in = self::$oParams->get ( 'disable_logged_in_users', '0' );
+		$disable_logged_in = self::$oParams->get ( 'disable_logged_in_users', '1' );
 
 		// Need to call Utility::isGuest after init has been called
 		if ($disable_logged_in && ! Utility::isGuest ()) {

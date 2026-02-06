@@ -60,6 +60,7 @@ class LightImages {
 		$srcSetResizeStartingResize = $this->params->get('img_processing_srcset_starting_resize', 100);
 		$srcSetResizeDecreaseStep = $this->params->get('img_processing_srcset_resize_decrease_step', 20);
 		$srcSetOriginalImage = $this->params->get('img_processing_srcset_original_image', 0);
+		$imgProcessingSrcsetDatasrc = (bool)$this->params->get('img_processing_srcset_datasrc', 0);
 		
 		$quality = $qualitySrcSet ? $qualitySrcSet : $this->params->get('img_quality', 70);
 		
@@ -70,6 +71,7 @@ class LightImages {
 		$resizeMinWidth = $this->params->get('img_resizing_minwidth', 50);
 		$processingMinWidth = $this->params->get('img_processing_minwidth', 50);
 		$processingDataSrc = $this->params->get('img_processing_datasrc', 0);
+		$processingDataCustom = $this->params->get('img_processing_datacustom', '');
 		
 		// Remove the default WP srcset
 		if($createSrcSet && !$srcSet) {
@@ -103,28 +105,54 @@ class LightImages {
 		}
 		
 		if (!isset($src)) {
-			return false;
+			if ($processingDataSrc && ($node->hasAttribute ( 'data-src' ) || ($processingDataCustom !== '' && $node->hasAttribute ( 'data-' . $processingDataCustom )))) {
+				// Go on
+				$src = '';
+			} else {
+				return false;
+			}
 		}
 		
 		// Need to remove query string if any
 		$src = preg_replace('/\?.*/', '', $src);
+		
+		// Need to remove fragment if any
+		$src = preg_replace('/\#.*/', '', $src);
 		
 		// Check if there is a processing for a lazy loaded image having a src=data:image and a valid data-src instead
 		if(strpos($src, 'data:image/svg+xml;bas' . 'e64') !== false && $node->hasAttribute('data-wpspeed-lazyload')) {
 			$src = $originalSrc = preg_replace('/\?.*/', '', $node->getAttribute('data-src'));
 			$this->lazyLoadedImage = true;
 			$processingDataSrc = true;
-			$createSrcSet = false;
+			$createSrcSet = $imgProcessingSrcsetDatasrc;
 		}
 		
-		// Check if there is a processing for a lazy loaded image having an invalid src and a valid data-src instead
-		if($processingDataSrc && $src == '#' && $node->hasAttribute('data-src')) {
-			$src = $originalSrc = $node->getAttribute('data-src');
-			$this->lazyLoadedImage = true;
-			$processingDataSrc = true;
-			$createSrcSet = false;
+		// Check if there is a processing for a lazy loaded image having an invalid or missing src and a valid data-src instead
+		if ($processingDataSrc &&
+			(!$src || strpos ( $src, 'data:image/svg+xml;base64' ) !== false || strpos ( $src, 'data:image/gif;base64' ) !== false) &&
+			($node->hasAttribute ( 'data-src' ) || ($processingDataCustom !== '' && $node->hasAttribute ( 'data-' . $processingDataCustom )))) {
+				$src = $originalSrc = $node->getAttribute('data-src');
+				
+				// Check if there is a custom data attribute fallback
+				if (!$src) {
+					$src = $originalSrc = $node->getAttribute('data-' . $processingDataCustom);
+				}
+				
+				if (!$src) {
+					return false;
+				}
+
+				// Need to remove query string if any
+				$src = preg_replace('/\?.*/', '', $src);
+				
+				// Need to remove fragment if any
+				$src = preg_replace('/\#.*/', '', $src);
+
+				$this->lazyLoadedImage = true;
+				$processingDataSrc = true;
+				$createSrcSet = $imgProcessingSrcsetDatasrc;
 		}
-		
+
 		// Need to remove encoding
 		$imagePath = urldecode($src);
 		
@@ -238,8 +266,8 @@ class LightImages {
 		
 		// Override force mode if all images must be converted to WEBP
 		$wpSpeedBrowser = Browser::getInstance()->getBrowser ();
-		$excludeJSpeedBrowserSafari = $this->params->get('exclude_light_images_safari', 1) && $wpSpeedBrowser == 'Safari';
-		if($this->params->get('convert_all_images_to_webp', 0) && function_exists('imagewebp') && $wpSpeedBrowser != 'IE' && !$excludeJSpeedBrowserSafari) {
+		$excludeJSpeedBrowserSafari = $this->params->get('exclude_light_images_safari', 0) && $wpSpeedBrowser == 'Safari';
+		if($this->params->get('convert_all_images_to_webp', 1) && function_exists('imagewebp') && $wpSpeedBrowser != 'IE' && !$excludeJSpeedBrowserSafari) {
 			$new_ext = 'webp';
 		}
 
@@ -362,9 +390,6 @@ class LightImages {
 				return false;
 			}
 			
-			@imagedestroy($image);
-			@imagedestroy($result);
-			
 			// Make sure we are really creating a smaller image!
 			if (filesize($full_path_filename) >= $image_file_size && !$srcSet && !$preSrcSetCreation) {
 				// Files that are 0bytes, mean that they sould be ignored.
@@ -401,8 +426,10 @@ class LightImages {
 			if(!$this->lazyLoadedImage) {
 				$node->setAttribute("src", $url);
 			}
-			if($processingDataSrc && $node->hasAttribute('data-src')) {
-				$node->setAttribute("data-src", $url);
+			if ($processingDataSrc && $node->hasAttribute ( 'data-src' )) {
+				$node->setAttribute ( "data-src", $url );
+			} elseif ($processingDataSrc && $processingDataCustom !== '' && $node->hasAttribute ( 'data-' . $processingDataCustom )) {
+				$node->setAttribute ( "data-" . $processingDataCustom, $url );
 			}
 		} else {
 			// Get the current srcset populated till this recursion
@@ -428,6 +455,8 @@ class LightImages {
 				$node->setAttribute("src", $url);
 				if($processingDataSrc && $node->hasAttribute('data-src')) {
 					$node->setAttribute("data-src", $url);
+				} elseif ($processingDataSrc && $processingDataCustom !== '' && $node->hasAttribute ( 'data-' . $processingDataCustom )) {
+					$node->setAttribute ( "data-" . $processingDataCustom, $url );
 				}
 			}
 		}
@@ -513,40 +542,94 @@ class LightImages {
 
 		$purifyString = trim($this->params->get('purify_string',''));
 
-		if($this->params->get('img_processing_entity_decode', 1)) {
+		// Param per switch DOMDocument <-> SimpleHtmlDom
+		$useSimpleHtmlDom = (bool) $this->params->get('use_simplehtmldom', 0);
+		
+		if ($useSimpleHtmlDom) {
+			// SimpleHtmlDom method
+			$dom = new SimpleHtmlDom();
+			
+			$dom->load($sOptimizedHtml);
+			
+			foreach ($dom->find('img') as $element) {
+				$this->processImageNodes($element);
+			}
+			
+			if ($this->params->get('img_processing_simplehtmldom_entity_decode', 0)) {
+				foreach ($dom->nodes as $n) {
+					if ($n->nodetype === WPSPEED_HDOM_TYPE_TEXT) {
+						$p = $n->parent;
+						if ($p && in_array(strtolower($p->tag), ['script','style'], true)) {
+							continue;
+						}
+						
+						$txt = $n->_[WPSPEED_HDOM_INFO_TEXT] ?? '';
+						if ($txt !== '') {
+							$txt = html_entity_decode($txt, ENT_QUOTES, 'UTF-8');
+							
+							$n->_[WPSPEED_HDOM_INFO_TEXT] = $txt;
+						}
+					}
+				}
+			}
+			
+			$output = $dom->save();
+			$dom->clear();
+			unset($dom);
+			
+			return $output;
+		} else {
+			// DOMDocument method
 			$doc = new \DOMDocument();
-		} else {
-			$doc = new \DOMDocument('1.0', 'UTF-8');
-		}
-		libxml_use_internal_errors(true);
-		
-		if($this->params->get('img_processing_utf8_entity_decode', 0)) {
-			$sOptimizedHtml = mb_convert_encoding($sOptimizedHtml, 'HTML-ENTITIES', 'UTF-8');
-		}
-		
-		if($purifyString) {
-			$purifyStringReplacement = trim($this->params->get('purify_string_replacement',''));
-			$doc->loadHTML(preg_replace('/' . addcslashes($purifyString, '/') . '/i', $purifyStringReplacement, $sOptimizedHtml));
-		} else {
-			$doc->loadHTML($sOptimizedHtml);
-		}
-		
-		if($this->params->get('img_processing_entity_decode', 1)) {
-			$doc->encoding = 'utf-8';
-		}
-		
-		libxml_clear_errors();
+			libxml_use_internal_errors(true);
+			
+			if($this->params->get('img_processing_utf8_entity_decode', 0)) {
+				$sOptimizedHtml = mb_encode_numericentity($sOptimizedHtml, [0x80, 0xFFFF, 0, 0xFFFF], 'UTF-8');
+			}
+			
+			// Fix for alpine.js @attributes
+			$sOptimizedHtml = preg_replace('/@click/i', 'x-on:click', $sOptimizedHtml);
+			$sOptimizedHtml = preg_replace('/@change/i', 'x-on:change', $sOptimizedHtml);
+			$sOptimizedHtml = preg_replace('/@submit/i', 'x-on:submit', $sOptimizedHtml);
+			
+			if($purifyString) {
+				$purifyStringReplacement = trim($this->params->get('purify_string_replacement',''));
+				$purifiedStringReplacedHtml = preg_replace('/' . addcslashes($purifyString, '/') . '/i', $purifyStringReplacement, $sOptimizedHtml);
+				
+				if($this->params->get('img_processing_utf8_entity_decode', 0)) {
+					$doc->loadHTML($purifiedStringReplacedHtml, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+				} else {
+					$doc->loadHTML($purifiedStringReplacedHtml);
+				}
+			} else {
+				if($this->params->get('img_processing_utf8_entity_decode', 0)) {
+					$doc->loadHTML($sOptimizedHtml, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+				} else {
+					$doc->loadHTML($sOptimizedHtml);
+				}
+			}
+			
+			if($this->params->get('img_processing_entity_decode', 1)) {
+				$doc->encoding = 'utf-8';
+			}
+			
+			libxml_clear_errors();
 
-		$nodes = $doc->getElementsByTagName('img');
+			$nodes = $doc->getElementsByTagName('img');
 
-		foreach ($nodes as $node) {
-			$this->processImageNodes($node);
-		}
-		
-		if($this->params->get('img_processing_entity_decode', 1)) {
-			return html_entity_decode($doc->saveHTML(), ENT_QUOTES, 'UTF-8');
-		} else {
-			return $doc->saveHTML();
+			foreach ($nodes as $node) {
+				$this->processImageNodes($node);
+			}
+			
+			if($this->params->get('img_processing_entity_decode', 1)) {
+				if($this->params->get('img_processing_utf8_entity_decode', 0)) {
+					return mb_decode_numericentity($doc->saveHTML(), [0x0, 0x2FFFF, 0, 0xFFFF], 'UTF-8');
+				} else {
+					return html_entity_decode($doc->saveHTML(), ENT_QUOTES, 'UTF-8');
+				}
+			} else {
+				return $doc->saveHTML();
+			}
 		}
 	}
 
@@ -564,11 +647,11 @@ class LightImages {
 	public function __construct($params) {
 		$this->params = $params;
 		
-		$this->isEnabled = $this->params->get('lightimgs_status', false);
+		$this->isEnabled = $this->params->get('lightimgs_status', 1);
 		
 		// Setup default excludes for Adaptive Contents
 		$isBot = false;
-		if($this->params->get('adaptive_contents_enable', 0) && $this->params->get('adaptive_contents_optimize_images', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+		if($this->params->get('adaptive_contents_enable', 1) && $this->params->get('adaptive_contents_optimize_images', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 			$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 			$botRegexPattern = array();
 			$botsList = $this->params->get ( 'adaptive_contents_bots_list', array (
@@ -603,7 +686,7 @@ class LightImages {
 			}
 		}
 		
-		$this->excludedExts = $this->params->get('img_exts_excluded', array());
+		$this->excludedExts = $this->params->get('img_exts_excluded', []);
 		$this->oFileRetriever = FileRetriever::getInstance ();
 		
 		include dirname( __FILE__, 3 ) . '/root.php';

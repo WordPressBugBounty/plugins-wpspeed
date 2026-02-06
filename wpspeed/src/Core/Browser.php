@@ -28,7 +28,7 @@ class Browser {
 		}
 		
 		$params = Plugin::getPluginParams ();
-		if(!is_admin() && $params->get('adaptive_contents_enable', 0)) {
+		if(!is_admin() && $params->get('adaptive_contents_enable', 1)) {
 			// Fallback for HTTP_X_FORWARDED_FOR
 			if($_SERVER['REMOTE_ADDR'] == '127.0.0.1' && isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != $_SERVER['REMOTE_ADDR']) {
 				// Check if there are multiple HTTP forwarded IP addresses

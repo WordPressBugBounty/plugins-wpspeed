@@ -70,7 +70,9 @@ class Helper
 			$statusCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
 
 			//Close the cURL handler.
-			curl_close( $ch );
+			if (is_resource($ch)) {
+				curl_close ($ch);
+			}
 
 			if ( $statusCode == 200 )
 			{

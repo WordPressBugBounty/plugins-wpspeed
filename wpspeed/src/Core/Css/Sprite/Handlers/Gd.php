@@ -130,7 +130,6 @@ class Gd implements HandlerInterface
 
 	public function destroy($oImage)
 	{
-		imagedestroy($oImage);
 	}
 
 	public function createImage($aFileInfo)

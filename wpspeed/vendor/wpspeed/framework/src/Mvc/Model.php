@@ -216,7 +216,7 @@ class Model
 	 *
 	 * @param   Container $container The configuration variables to this model
 	 */
-	public function __construct(\WPSFramework\Container\Container $container = null)
+	public function __construct(?\WPSFramework\Container\Container $container = null)
 	{
 		if (!is_object($container))
 		{

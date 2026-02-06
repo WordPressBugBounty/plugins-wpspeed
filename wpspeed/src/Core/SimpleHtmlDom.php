@@ -1192,6 +1192,7 @@ class SimpleHtmlDomNode
 			case 'innertext': return $this->innertext();
 			case 'plaintext': return $this->text();
 			case 'xmltext': return $this->xmltext();
+			case 'nodeType': return XML_ELEMENT_NODE;
 			default: return array_key_exists($name, $this->attr);
 		}
 	}
@@ -1506,6 +1507,9 @@ class SimpleHtmlDomNode
 		return $node;
 	}
 
+	function hasAttributes() {
+		return true;
+	}
 }
 
 /**

@@ -31,9 +31,21 @@ class Html
 
 		$aSavedSettings = get_option( 'wpspeed_settings' );
 
-		if ( ! isset( $aSavedSettings[$settingName] ) )
+		if ( ! isset( $aSavedSettings[$settingName] ) && $key != 'multiselect')
 		{
 			$activeValue = $defaultValue;
+		}
+		elseif ( ! isset( $aSavedSettings[$settingName] ) && $key == 'multiselect')
+		{
+			if(!$aSavedSettings && $aArgs[0] !== '') {
+				$activeValue = $defaultValue;
+			} else {
+				if($aArgs[0] === '') {
+					$activeValue = [];
+				} else {
+					$activeValue = $defaultValue;
+				}
+			}
 		}
 		else
 		{
@@ -44,7 +56,7 @@ class Html
 
 		//prepend $settingName, $activeValue to arguments
 		array_unshift( $aArgs, $settingName, $activeValue );
-
+		
 		if($key == 'multiselect') {
 			array_push( $aArgs, $defaultValue);
 		}
@@ -80,7 +92,7 @@ class Html
 
 		if ( $description )
 		{
-			$text .= '<div class="description"><span class="fa fa-info-circle"></span><div><p>' . $description . '</p></div></div>';
+			$text .= '<div class="settingdesc">' . $description . '</div>';
 		}
 
 		if ( $new )

@@ -31,7 +31,7 @@ final class Factory
 	 *
 	 * @return  FilesystemInterface  The filesystem abstraction adapter
 	 */
-	public static function getAdapter(Container $container = null, $hybrid = false)
+	public static function getAdapter(?Container $container = null, $hybrid = false)
 	{
 		if (!is_object($container))
 		{

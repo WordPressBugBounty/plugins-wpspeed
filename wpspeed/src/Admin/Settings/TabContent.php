@@ -43,20 +43,15 @@ HTML;
 
 	public static function addSection( $header = '', $description = '', $class = '' )
 	{
-		if ( ! empty( $header ) )
-		{
-			$header = <<<HMTL
-<legend>{$header}</legend>
-HMTL;
-		}
-
 		return <<<HTML
 			</div>
 		</fieldset>
 		<fieldset class="wpspeed-group">
-			{$header}
-			<div class="{$class}"><p><em>{$description}</em></p></div>
-			<div>		
+			<div class="wpspeed-group-header {$class}">
+				<h4 class="setting-header">$header</h4>
+				<p class="setting-header-description">{$description}</p>
+			</div>
+			<div>
 HTML;
 	}
 

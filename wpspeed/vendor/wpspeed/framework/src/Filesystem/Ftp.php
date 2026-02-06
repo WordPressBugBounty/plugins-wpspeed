@@ -84,7 +84,7 @@ class Ftp implements FilesystemInterface
 	 *
 	 * @throws  \RuntimeException
 	 */
-	public function __construct(array $options, Container $container = null)
+	public function __construct(array $options, ?Container $container = null)
 	{
         if(!is_object($container))
         {

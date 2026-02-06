@@ -15,8 +15,12 @@ namespace WPSpeed\Admin\Settings\Renderer;
 use WPSpeed\Admin\Settings\Html;
 
 class Setting {
+	public static function registration_email() {
+		echo '';
+	}
+	
 	public static function autoconfiguration() {
-		echo Html::_ ( 'rangeSlider', 'rangeSlider', '0' );
+		echo Html::_ ( 'rangeSlider', 'rangeSlider', '5' );
 	}
 	
 	public static function pagespeed() {
@@ -40,7 +44,7 @@ class Setting {
 		echo Html::_ ( 'radio', 'order_plugin', '1' );
 	}
 	public static function disable_logged_in_users() {
-		echo Html::_ ( 'radio', 'disable_logged_in_users', '0' );
+		echo Html::_ ( 'radio', 'disable_logged_in_users', '1' );
 	}
 	public static function menuexcludedurl() {
 		echo Html::_ ( 'multiselect', 'menuexcludedurl', [ ], 'url', 'file' );
@@ -62,10 +66,14 @@ class Setting {
 				'86400' => __ ( '1 day', 'wpspeed' ),
 				'172800' => __ ( '2 days', 'wpspeed' ),
 				'604800' => __ ( '7 days', 'wpspeed' ),
-				'1209600' => __ ( '2 weeks', 'wpspeed' )
+				'1209600' => __ ( '2 weeks', 'wpspeed' ),
+				'1814400'  => __( '3 weeks', 'wpspeed' ),
+				'2592000'  => __( '1 month', 'wpspeed' ),
+				'7776000'  => __( '3 months', 'wpspeed' ),
+				'31536000'  => __( 'No expiration', 'wpspeed' )
 		];
 
-		echo Html::_ ( 'select', 'cache_lifetime', '900', $aOptions );
+		echo Html::_ ( 'select', 'cache_lifetime', '86400', $aOptions );
 	}
 	public static function html_minify_level() {
 		$aOptions = [ 
@@ -74,7 +82,7 @@ class Setting {
 				'2' => __ ( 'High', 'wpspeed' )
 		];
 
-		echo Html::_ ( 'select', 'html_minify_level', '1', $aOptions );
+		echo Html::_ ( 'select', 'html_minify_level', '2', $aOptions );
 	}
 	public static function try_catch() {
 		echo Html::_ ( 'radio', 'try_catch', '1' );
@@ -119,10 +127,10 @@ class Setting {
 		echo Html::_ ( 'radio', 'font_display_swap', '1' );
 	}
 	public static function defer_combined_styles() {
-		echo Html::_ ( 'radio', 'defer_combined_styles', '0' );
+		echo Html::_ ( 'radio', 'defer_combined_styles', '1' );
 	}
 	public static function optimizeCssDelivery_enable() {
-		echo Html::_ ( 'radio', 'optimizeCssDelivery_enable', '0' );
+		echo Html::_ ( 'radio', 'optimizeCssDelivery_enable', '1' );
 	}
 	public static function optimizeCssDelivery() {
 		$aOptions = [
@@ -202,7 +210,10 @@ class Setting {
 		echo Html::_ ( 'multiselect', 'remove_js', [ ], 'js', 'file' );
 	}
 	public static function cache_enable() {
-		echo Html::_ ( 'radio', 'cache_enable', '0' );
+		echo Html::_ ( 'radio', 'cache_enable', '1' );
+	}
+	public static function htaccess_cache_enable() {
+		echo Html::_ ( 'radio', 'htaccess_cache_enable', '0' );
 	}
 	public static function pro_cache_platform() {
 		echo Html::_ ( 'radio', 'pro_cache_platform', '0' );
@@ -223,13 +234,22 @@ class Setting {
 				'604800' => __ ( '1 week', 'wpspeed' )
 		];
 
-		echo Html::_ ( 'select', 'page_cache_lifetime', '600', $aOptions );
+		echo Html::_ ( 'select', 'page_cache_lifetime', '43200', $aOptions );
 	}
 	public static function cache_exclude() {
 		echo Html::_ ( 'multiselect', 'cache_exclude', [ ], 'url', 'file' );
 	}
 	public static function img_attributes_enable() {
-		echo Html::_ ( 'radio', 'img_attributes_enable', '0' );
+		echo Html::_ ( 'radio', 'img_attributes_enable', '1' );
+	}
+	public static function delete_all_cache() {
+		echo Html::_ ( 'radio', 'delete_all_cache', '0' );
+	}
+	public static function use_simplehtmldom() {
+		echo Html::_ ( 'radio', 'use_simplehtmldom', '0' );
+	}
+	public static function img_processing_simplehtmldom_entity_decode() {
+		echo Html::_ ( 'radio', 'img_processing_simplehtmldom_entity_decode', '0' );
 	}
 	public static function csg_enable() {
 		echo Html::_ ( 'radio', 'csg_enable', '0' );
@@ -252,7 +272,7 @@ class Setting {
 		echo Html::_ ( 'multiselect', 'csg_include_images', [ ], 'images', 'file' );
 	}
 	public static function lazyload_enable() {
-		echo Html::_ ( 'radio', 'lazyload_enable', '0' );
+		echo Html::_ ( 'radio', 'lazyload_enable', '1' );
 	}
 	public static function lazyload_autosize() {
 		echo Html::_ ( 'radio', 'lazyload_autosize', '0' );
@@ -280,6 +300,9 @@ class Setting {
 	}
 	public static function pro_excludeLazyLoadClass() {
 		echo Html::_ ( 'multiselect', 'pro_excludeLazyLoadClass', [ ], 'lazyload', 'class' );
+	}
+	public static function pro_excludeLazyLoadApplyFetchPriority() {
+		echo Html::_ ( 'radio', 'pro_excludeLazyLoadApplyFetchPriority', '0' );
 	}
 	public static function http2_push_enable() {
 		echo Html::_ ( 'radio', 'http2_push_enable', '0' );
@@ -386,7 +409,7 @@ class Setting {
 		echo Html::_ ( 'multiselect', 'pro_html_sections', $options, 'none', 'value' );
 	}
 	public static function lightimgs_status() {
-		echo Html::_ ( 'radio', 'lightimgs_status', '0' );
+		echo Html::_ ( 'radio', 'lightimgs_status', '1' );
 	}
 	public static function img_processing_minwidth() {
 		echo Html::_ ( 'text', 'img_processing_minwidth', '50' );
@@ -436,7 +459,7 @@ class Setting {
 		echo Html::_ ( 'text', 'img_resizing_minwidth', '300' );
 	}
 	public static function convert_all_images_to_webp() {
-		echo Html::_ ( 'radio', 'convert_all_images_to_webp', '0' );
+		echo Html::_ ( 'radio', 'convert_all_images_to_webp', '1' );
 		
 		if(function_exists('imagewebp')) {
 			echo '<span data-bs-content="' . __('Your server and PHP version support the conversion to the WebP format', 'wpspeed') . '" class="badge bg-success jspeed-checker hasPopover">' .
@@ -477,7 +500,7 @@ class Setting {
 		}
 	}
 	public static function exclude_light_images_safari() {
-		echo Html::_ ( 'radio', 'exclude_light_images_safari', '1' );
+		echo Html::_ ( 'radio', 'exclude_light_images_safari', '0' );
 	}
 	public static function optimize_css_background_images() {
 		echo Html::_ ( 'radio', 'optimize_css_background_images', '0' );
@@ -500,9 +523,11 @@ class Setting {
 
 		echo Html::_ ( 'select', 'hash_images_algo', 'full', $aOptions );
 	}
+	public static function preserve_cached_images() {
+		echo Html::_ ( 'radio', 'preserve_cached_images', '0' );
+	}
 	public static function img_exts_excluded() {
 		$aOptions = [
-				'' => __ ( 'No exclusions', 'wpspeed' ),
 				'jpeg' => __ ( 'jpeg', 'wpspeed' ),
 				'jpg' => __ ( 'jpg', 'wpspeed' ),
 				'png' => __ ( 'png', 'wpspeed' ),
@@ -510,7 +535,7 @@ class Setting {
 				'bmp' => __ ( 'bmp', 'wpspeed' )
 		];
 
-		echo Html::_ ( 'select', 'img_exts_excluded', '', $aOptions, 'wpspeed-native-multiselect', true );
+		echo Html::_ ( 'multiselect', 'img_exts_excluded', array_keys ( $aOptions ), '', 'value' );
 	}
 	public static function img_files_excluded() {
 		echo Html::_ ( 'multiselect', 'img_files_excluded', [ ], 'none', 'file' );
@@ -526,6 +551,9 @@ class Setting {
 	}
 	public static function img_processing_datasrc() {
 		echo Html::_ ( 'radio', 'img_processing_datasrc', '0' );
+	}
+	public static function img_processing_datacustom() {
+		echo Html::_ ( 'text', 'img_processing_datacustom', '', '' );
 	}
 	public static function img_processing_entity_decode() {
 		echo Html::_ ( 'radio', 'img_processing_entity_decode', '1' );
@@ -612,8 +640,11 @@ class Setting {
 
 		echo Html::_ ( 'select', 'img_processing_srcset_original_image', '0', $aOptions );
 	}
+	public static function img_processing_srcset_datasrc() {
+		echo Html::_ ( 'radio', 'img_processing_srcset_datasrc', '0' );
+	}
 	public static function adaptive_contents_enable() {
-		echo Html::_ ( 'radio', 'adaptive_contents_enable', '0' );
+		echo Html::_ ( 'radio', 'adaptive_contents_enable', '1' );
 	}
 	public static function adaptive_contents_css_selector() {
 		echo Html::_ ( 'text', 'adaptive_contents_css_selector', 'script[src],iframe,video', '100' );
@@ -654,25 +685,31 @@ class Setting {
 		echo Html::_ ( 'multiselect', 'adaptive_contents_remove_css_files', [ ], 'css', 'file' );
 	}
 	public static function adaptive_contents_remove_all_js() {
-		echo Html::_ ( 'radio', 'adaptive_contents_remove_all_js', '0' );
+		echo Html::_ ( 'radio', 'adaptive_contents_remove_all_js', '1' );
 	}
 	public static function adaptive_contents_remove_all_css() {
-		echo Html::_ ( 'radio', 'adaptive_contents_remove_all_css', '0' );
+		echo Html::_ ( 'radio', 'adaptive_contents_remove_all_css', '1' );
 	}
 	public static function adaptive_contents_essential_css_code() {
 		echo Html::_ ( 'textarea', 'adaptive_contents_essential_css_code', '' );
+	}
+	public static function adaptive_contents_essential_js_code() {
+		echo Html::_ ( 'textarea', 'adaptive_contents_essential_js_code', '' );
 	}
 	public static function enable_instant_page() {
 		echo Html::_ ( 'radio', 'enable_instant_page', '0' );
 	}
 	public static function adaptive_contents_add_size_attributes() {
-		echo Html::_ ( 'radio', 'adaptive_contents_add_size_attributes', '0' );
+		echo Html::_ ( 'radio', 'adaptive_contents_add_size_attributes', '1' );
 	}
 	public static function adaptive_contents_optimize_images() {
 		echo Html::_ ( 'radio', 'adaptive_contents_optimize_images', '0' );
 	}
 	public static function adaptive_contents_extract_css() {
-		echo Html::_ ( 'radio', 'adaptive_contents_extract_css', '0' );
+		echo Html::_ ( 'radio', 'adaptive_contents_extract_css', '1' );
+	}
+	public static function adaptive_contents_essential_js_code_lazyload_imgs() {
+		echo Html::_ ( 'radio', 'adaptive_contents_essential_js_code_lazyload_imgs', '0' );
 	}
 	public static function instant_page_delay() {
 		$aOptions = [ 

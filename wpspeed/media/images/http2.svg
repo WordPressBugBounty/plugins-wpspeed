@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <!-- documento -->
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <!-- header -->
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- simbolo HTTP/2 -->
+  <g transform="translate(4,32)">
+    <text x="0" y="18" font-family="monospace" font-size="16" font-weight="bold" fill="#2F4971">HTTP/2</text>
+
+    <!-- linee parallele (multiplexing) -->
+    <path d="M0 28 H48" stroke="#5CB1FF" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M0 34 H48" stroke="#5CB1FF" stroke-width="2.6" stroke-linecap="round"></path>
+  </g>
+</svg>

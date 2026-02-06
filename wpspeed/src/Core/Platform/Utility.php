@@ -371,6 +371,6 @@ class Utility implements UtilityInterface {
 		return 'data-bs-content';
 	}
 	public static function isPageCacheEnabled(Settings $oParams) {
-		return ( bool ) $oParams->get ( 'cache_enable', '0' );
+		return ( bool ) $oParams->get ( 'cache_enable', '1' );
 	}
 }

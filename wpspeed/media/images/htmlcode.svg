@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="74" viewBox="0 0 56 74" fill="none" aria-hidden="true">
+  <rect x="0" y="0" width="56" height="70" rx="6" fill="#D1E3FA"></rect>
+  <rect x="0" y="0" width="56" height="12" rx="6" fill="#5CB1FF"></rect>
+
+  <!-- simbolo </> -->
+  <g transform="translate(8,28)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 0 L0 8 L8 16" stroke="#2F4971" stroke-width="2.8"></path>
+    <path d="M24 0 L32 8 L24 16" stroke="#2F4971" stroke-width="2.8"></path>
+    <line x1="14" y1="2" x2="18" y2="14" stroke="#5CB1FF" stroke-width="2.8"></line>
+  </g>
+
+  <!-- spinner -->
+  <g transform="translate(44,10)">
+    <circle cx="0" cy="0" r="5" stroke="#2F4971" stroke-opacity="0.2" stroke-width="2" fill="none"></circle>
+    <path d="M5 0 A5 5 0 0 1 0 -5" stroke="#5CB1FF" stroke-width="2" fill="none" stroke-linecap="round"></path>
+  </g>
+</svg>

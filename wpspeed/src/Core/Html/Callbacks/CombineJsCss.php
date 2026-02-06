@@ -71,7 +71,7 @@ class CombineJsCss extends CallbackBase
 
 		// Setup default excludes for Adaptive Contents
 		$isBot = false;
-		if($this->oParams->get('adaptive_contents_enable', 0) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
+		if($this->oParams->get('adaptive_contents_enable', 1) && isset ( $_SERVER ['HTTP_USER_AGENT'] )) {
 			$user_agent = $_SERVER ['HTTP_USER_AGENT'];
 			$botRegexPattern = array();
 			$botsList = $this->oParams->get ( 'adaptive_contents_bots_list', array (

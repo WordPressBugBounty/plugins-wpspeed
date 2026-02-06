@@ -23,7 +23,7 @@ class Application extends \WPSFramework\Application\Application {
 	 *        	
 	 * @return void
 	 */
-	public function __construct(Container $container = null) {
+	public function __construct(?Container $container = null) {
 		// Start keeping time
 		$this->startTime = microtime ( true );
 
