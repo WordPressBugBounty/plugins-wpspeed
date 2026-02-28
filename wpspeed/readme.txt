@@ -1,9 +1,9 @@
 === WPSpeed – WordPress Speed, Cache & Performance Optimization (Core Web Vitals, PageSpeed 100) ===
 
 Tags: performance, pagespeed, cache, optimize, seo
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 2.6.9
+Stable tag: 2.6.10
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -207,6 +207,10 @@ Upload the WPSpeed plugin to your blog. Activate it, then configure settings to 
 7. Assets optimization
 
 == Changelog ==
+
+= 2.6.10 FREE / 2.10 PRO DOWNLOAD -> https://storejextensions.org/extensions/wpspeed.html =
+* Updated interface for Wordpress 7
+* Improvements
 
 = 2.6.9 FREE / 2.9 PRO DOWNLOAD -> https://storejextensions.org/extensions/wpspeed.html =
 * Added new option to add custom JS for adaptive contents

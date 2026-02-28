@@ -172,10 +172,10 @@ var adminUtilities = (function($) {
 		    gradient.setAttribute("y2", "0%");
 		    const stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
 		    stop1.setAttribute("offset", "0%");
-		    stop1.setAttribute("stop-color", "#3b82f6");
-		    const stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-		    stop2.setAttribute("offset", "100%");
-		    stop2.setAttribute("stop-color", "#06b6d4");
+			stop1.setAttribute("stop-color", "#3858e9");
+			const stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+			stop2.setAttribute("offset", "100%");
+			stop2.setAttribute("stop-color", "#7A9BFF");
 		    gradient.appendChild(stop1);
 		    gradient.appendChild(stop2);
 		    defs.appendChild(gradient);

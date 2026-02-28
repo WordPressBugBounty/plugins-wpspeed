@@ -957,6 +957,18 @@ div.circle-check.active::before {
 	background-image: url(../images/sidebar/advanced.svg);
 }
 
+#wpspeed-settings-form a.nav-link.active::after {
+    right: 0;
+    border: solid 8px transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #f0f0f1;
+    top: 50%;
+    margin-top: -8px;
+}
 
 .wpspeed-group .wpspeed-group-header {
   position: relative;
@@ -1169,4 +1181,88 @@ div.circle-check.active::before {
 
 .select2-container--default .select2-results>.select2-results__options {
     overflow-x: hidden;
+}
+
+body[class*="branch-7"] .bg-primary,
+body[class*="branch-8"] .bg-primary,
+body[class*="branch-9"] .bg-primary,
+body[class*="branch-7"] #rangecontainer span.innerlabel.badge.bg-primary,
+body[class*="branch-7"] #optimizationslist span.badge.bg-primary,
+body[class*="branch-8"] #rangecontainer span.innerlabel.badge.bg-primary,
+body[class*="branch-8"] #optimizationslist span.badge.bg-primary,
+body[class*="branch-9"] #rangecontainer span.innerlabel.badge.bg-primary,
+body[class*="branch-9"] #optimizationslist span.badge.bg-primary,
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active {
+	background-color: #3858e9 !important;
+}
+
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item:first-child a.active,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item a.active,
+
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item a:hover:not(.active),
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item a:hover:not(.active),
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item a:hover:not(.active) {
+	border-left: 4px solid #3858e9;
+}
+
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item a,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item a,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item a {
+	border-left: 4px solid #0c0c0c;
+}
+
+body[class*="branch-7"] #wpspeed-settings-form ul.nav-pills li.nav-item a,
+body[class*="branch-8"] #wpspeed-settings-form ul.nav-pills li.nav-item a,
+body[class*="branch-9"] #wpspeed-settings-form ul.nav-pills li.nav-item a {
+    background-color: #0c0c0c;
+}
+
+body[class*="branch-7"] div.savebtn.icon p input,
+body[class*="branch-8"] div.savebtn.icon p input,
+body[class*="branch-9"] div.savebtn.icon p input {
+    outline: 2px solid #3858e9;
+}
+
+
+body[class*="branch-7"] .form-table .btn-group.wpswitch.on::after,
+body[class*="branch-8"] .form-table .btn-group.wpswitch.on::after,
+body[class*="branch-9"] .form-table .btn-group.wpswitch.on::after,
+body[class*="branch-7"] div.circle-check.active::before,
+body[class*="branch-8"] div.circle-check.active::before,
+body[class*="branch-9"] div.circle-check.active::before {
+	background: #3858e9;
+}
+
+body[class*="branch-7"] a#pagespeed-test,
+body[class*="branch-8"] a#pagespeed-test,
+body[class*="branch-9"] a#pagespeed-test {
+	background-color: #3858e9 !important;
+	border-color: #3858e9;
+}
+
+body[class*="branch-7"] .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+body[class*="branch-8"] .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+body[class*="branch-9"] .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background: #3858e9;
+}
+
+body[class*="branch-7"] .select2-container--default .select2-results__option--highlighted[aria-selected],
+body[class*="branch-8"] .select2-container--default .select2-results__option--highlighted[aria-selected],
+body[class*="branch-9"] .select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #3858e9;
+}
+
+body[class*="branch-7"] .select2-container--default .select2-selection--multiple:focus, .select2-container--default.select2-container--focus .select2-selection--multiple,
+body[class*="branch-8"] .select2-container--default .select2-selection--multiple:focus, .select2-container--default.select2-container--focus .select2-selection--multiple,
+body[class*="branch-9"] .select2-container--default .select2-selection--multiple:focus, .select2-container--default.select2-container--focus .select2-selection--multiple {
+	border-color: #3858e9;
 }

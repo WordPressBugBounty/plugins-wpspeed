@@ -88,6 +88,7 @@ div.jspeed-setting-row {
     margin-bottom: 0;
     align-items: center;
 	flex-wrap: nowrap;
+	box-sizing: content-box;
 }
 
 div.jspeed-setting-row:last-child {
@@ -137,4 +138,16 @@ span[data-container-label="4"] {
 #rangecontainer span.innerlabel.badge.bg-primary,
 #optimizationslist span.badge.bg-primary {
     background-color: #2271b1 !important;
+}
+
+body[class*="branch-7"] #wpspeed_settings_rangeSlider::-webkit-slider-runnable-track,
+body[class*="branch-8"] #wpspeed_settings_rangeSlider::-webkit-slider-runnable-track,
+body[class*="branch-9"] #wpspeed_settings_rangeSlider::-webkit-slider-runnable-track {
+	background: linear-gradient(90deg, #3858e9 var(--range-progress), #E7F4FE var(--range-progress));
+}
+
+body[class*="branch-7"] #wpspeed_settings_rangeSlider::-webkit-slider-thumb,
+body[class*="branch-8"] #wpspeed_settings_rangeSlider::-webkit-slider-thumb,
+body[class*="branch-9"] #wpspeed_settings_rangeSlider::-webkit-slider-thumb {
+    border: 4px solid #3858e9;
 }

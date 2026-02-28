@@ -168,20 +168,14 @@ PHPCODE;
 		Tasks::cleanHtaccess ();
 	}
 	public static function runOptimize($sHtml) {
-		global $wpdb;
-		
 		if (! Helper::validateHtml ( $sHtml )) {
 			return $sHtml;
 		}
 		
-		// Check pages
-		// Define your custom query
-		$query = "SELECT slug FROM {$wpdb->prefix}terms";
+		$homePath    = rtrim(parse_url(get_option('home'), PHP_URL_PATH), '/');
+		$requestPath = rtrim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
 		
-		// Run the query
-		$results = $wpdb->get_col($query);
-		$uriPath = trim(Uri::getInstance()->getPath(), '/');
-		if(trim(Uri::getInstance()->getPath(), '/') && !in_array($uriPath, $results)) {
+		if ($requestPath !== $homePath) {
 			return $sHtml;
 		}
 
