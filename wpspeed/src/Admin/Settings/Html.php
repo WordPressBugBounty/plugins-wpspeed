@@ -253,7 +253,7 @@ HTML;
 	 *
 	 * @return string
 	 */
-	public static function textarea( $settingName, $activeValue, $rows = '10', $cols = '50', $class = '' )
+	public static function textarea( $settingName, $activeValue, $rows = '10', $cols = '100', $class = '' )
 	{
 		$textInputHtml = <<<HTML
 <textarea id="wpspeed_settings_{$settingName}" name="wpspeed_settings[{$settingName}]" rows="{$rows}" cols="{$cols}" class="{$class}">{$activeValue}</textarea>

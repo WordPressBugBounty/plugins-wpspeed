@@ -166,8 +166,14 @@ p.setting-header-description {
     border: 1px solid #cacaca;
 }
 
-.wpspeed-group select {
+.wpspeed-group select,
+.wpspeed-group textarea {
     border: 1px solid #cacaca;
+}
+
+.wpspeed-group input[type=text],
+.wpspeed-group textarea {
+	max-width: 100%;
 }
 
 .wpspeed-group .form-table td {
