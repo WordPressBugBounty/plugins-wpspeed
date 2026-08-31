@@ -1,7 +1,7 @@
 === WPSpeed – WordPress Speed, Cache & Performance Optimization (Core Web Vitals, PageSpeed 100) ===
 
 Tags: performance, pagespeed, cache, optimize, seo
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.2
 Stable tag: 2.6.10
 License: GPLv3 or later
@@ -11,11 +11,11 @@ WordPress speed optimization plugin to boost PageSpeed, improve Core Web Vitals,
 
 == Description ==
 
-WPSpeed is a powerful and complete **WordPress performance plugin** built to achieve the highest Google PageSpeed scores — including **100 on mobile** — while improving Core Web Vitals (LCP, CLS, INP) and dramatically reducing loading times.
+WPSpeed is a powerful and complete **WordPress performance plugin**, built to achieve the highest Google PageSpeed scores — including **100 on mobile** — while improving Core Web Vitals (LCP, CLS, INP) and dramatically reducing loading times.
 
 Using an innovative system that generates **lightweight HTML copies** of your pages and bypasses WordPress execution, WPSpeed delivers static, cached output for maximum speed. Combined with automatic optimization, image compression, lazy loading, minification, and advanced resource control, WPSpeed becomes an **all-in-one solution** that can fully replace multiple optimization plugins.
 
-👉 Unlike traditional caching plugins, WPSpeed generates lightweight static HTML versions that bypass WordPress execution entirely, reducing TTFB to near-zero.
+👉 Unlike traditional caching plugins, WPSpeed generates lightweight static HTML versions that bypass WordPress execution entirely reducing TTFB to near-zero.
 
 WPSpeed is the easiest plugin to speed up your Wordpress website being capable **to find the optimal configuration automatically** and integrating the **Google PageSpeed test**.
 
