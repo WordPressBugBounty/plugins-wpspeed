@@ -253,6 +253,12 @@ class Html extends Base
                 	$this->_html = preg_replace_callback(
                 			'/(url)(\(.*\))/imU',
                 			function ($matches) use ($lightImageOptimizer, $dom, $imgsRegex, $absoluteUri) {
+                				// Preserve SVG fragments, gradients, CSS variables and dynamic template expressions.
+                				// Only image URLs supported by the optimizer may be normalized or rewritten.
+                				if(!preg_match($imgsRegex, $matches[2])) {
+                					return $matches[0];
+                				}
+
                 				// Exclude if it's a fully qualified image, allow local absolute URLs
                 				if(preg_match('/https?:\/{2}[^\/]+|\/\//i', $matches[2])) {
                 					if (trim(substr($matches[2], 1, strlen(Uri::root())), '/') == trim(Uri::root(), '/') ||
