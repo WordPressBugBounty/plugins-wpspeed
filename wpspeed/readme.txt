@@ -3,7 +3,7 @@
 Tags: performance, pagespeed, cache, optimize, seo
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 2.6.10
+Stable tag: 2.6.11
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -207,6 +207,8 @@ Upload the WPSpeed plugin to your blog. Activate it, then configure settings to 
 7. Assets optimization
 
 == Changelog ==
+= 2.6.11 FREE / 2.11 PRO DOWNLOAD -> https://storejextensions.org/extensions/wpspeed.html =
+* Security fix: Light Images optimizer no longer decodes HTML entities across the whole page output, only within the img attributes it generates itself, preventing stored XSS via entity-encoded user profile fields (nickname/display name) rendered on author archives (CVE-2026-118784)
 
 = 2.6.10 FREE / 2.10 PRO DOWNLOAD -> https://storejextensions.org/extensions/wpspeed.html =
 * Updated interface for Wordpress 7

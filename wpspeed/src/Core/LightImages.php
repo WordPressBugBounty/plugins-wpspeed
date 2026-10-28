@@ -620,16 +620,38 @@ class LightImages {
 			foreach ($nodes as $node) {
 				$this->processImageNodes($node);
 			}
-			
+
 			if($this->params->get('img_processing_entity_decode', 1)) {
-				if($this->params->get('img_processing_utf8_entity_decode', 0)) {
-					return mb_decode_numericentity($doc->saveHTML(), [0x0, 0x2FFFF, 0, 0xFFFF], 'UTF-8');
-				} else {
-					return html_entity_decode($doc->saveHTML(), ENT_QUOTES, 'UTF-8');
+				// Only decode entities inside the attributes this optimizer itself
+				// generated on <img> nodes, never across the whole serialized
+				// document: decoding arbitrary text nodes can rehydrate
+				// entity-encoded user-supplied markup (e.g. nickname/display_name)
+				// into live, executable HTML.
+				$processingDataCustom = trim((string) $this->params->get('img_processing_datacustom', ''));
+				$decodeAttributes = ['src', 'data-src', 'srcset', 'data-srcset'];
+				if ($processingDataCustom !== '') {
+					$decodeAttributes[] = 'data-' . $processingDataCustom;
 				}
-			} else {
-				return $doc->saveHTML();
+
+				$useUtf8EntityDecode = $this->params->get('img_processing_utf8_entity_decode', 0);
+
+				foreach ($nodes as $node) {
+					foreach ($decodeAttributes as $attributeName) {
+						if (!$node->hasAttribute($attributeName)) {
+							continue;
+						}
+
+						$attributeValue = $node->getAttribute($attributeName);
+						$decodedValue = $useUtf8EntityDecode
+							? mb_decode_numericentity($attributeValue, [0x0, 0x2FFFF, 0, 0xFFFF], 'UTF-8')
+							: html_entity_decode($attributeValue, ENT_QUOTES, 'UTF-8');
+
+						$node->setAttribute($attributeName, $decodedValue);
+					}
+				}
 			}
+
+			return $doc->saveHTML();
 		}
 	}
 
